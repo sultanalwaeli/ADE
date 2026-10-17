@@ -7,174 +7,892 @@
 <title>نبض الإجادة | أبو الدرداء</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#06192b;--surface:#0c2b45;--surface2:#123a56;--line:#ffffff24;--text:#f5fbff;--sub:#bad0dd;--aqua:#66e0de;--gold:#f1cd83;--green:#92e3ba;--orange:#ffce9b}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 20% -10%,#17658a45,transparent 40%),var(--bg);color:var(--text);font-family:Cairo,Tahoma,sans-serif}button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.shell{max-width:1450px;margin:auto;padding:0 25px}header{position:sticky;top:0;z-index:20;background:#071a2ce8;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.topbar{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:14px 0;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:13px}.brand-mark{width:55px;height:55px;border-radius:18px;display:grid;place-items:center;font-size:26px;color:#052b3e;background:linear-gradient(140deg,var(--gold),#fff2d1);box-shadow:0 5px 28px #efca8040}.brand h2{font-size:19px;margin:0}.brand small{color:var(--sub);font-size:11px}.tools{display:flex;gap:8px;flex-wrap:wrap}.btn{background:#ffffff0e;border:1px solid #ffffff2c;color:#fff;border-radius:12px;padding:9px 15px;font-weight:800;transition:.2s}.btn:hover{background:#ffffff22;transform:translateY(-1px)}.btn.primary{background:linear-gradient(135deg,#1b9bad,#196485);border:0}.btn.gold{background:linear-gradient(135deg,#f4d995,#c99b4e);color:#14283a;border:0}.nav{display:flex;gap:7px;overflow:auto;padding:0 0 12px;scrollbar-width:thin}.nav button{white-space:nowrap;padding:9px 13px;background:#ffffff0a;border:1px solid var(--line);color:var(--sub);border-radius:11px;font-weight:800;font-size:12px}.nav button.active{background:#1c7c96;color:white;border-color:#5ad2d7}main{padding-top:25px;padding-bottom:65px;min-height:65vh}.hero{position:relative;overflow:hidden;border:1px solid #ffffff30;border-radius:25px;background:radial-gradient(circle at 14% 22%,#219ab24a,transparent 36%),linear-gradient(130deg,#164a68,#0b2741 75%);padding:38px;margin-bottom:20px}.hero:after{content:"✦";position:absolute;left:38px;top:8px;font-size:160px;color:#ffffff08;pointer-events:none}.eyebrow{font-size:12px;color:var(--gold);letter-spacing:2px;font-weight:900}.hero h1{font-size:clamp(27px,4vw,45px);line-height:1.5;margin:8px 0}.hero p{color:#d2e8f2;max-width:850px;font-size:15px;line-height:2}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}.card{background:linear-gradient(150deg,var(--surface),#0a233a);border:1px solid var(--line);border-radius:20px;padding:23px;margin-bottom:16px;min-width:0}.card h2{font-size:20px;margin:0 0 15px}.card h3{font-size:16px;color:var(--gold);margin:0 0 10px}.card p{line-height:2;color:var(--sub);margin:7px 0;white-space:pre-line}.stat{text-align:center}.stat b{display:block;color:var(--aqua);font-size:35px;line-height:1.5}.stat span{font-size:12px;color:var(--sub)}.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.info{border:1px solid #ffffff19;border-radius:14px;background:#ffffff08;padding:14px;min-width:0}.info small{display:block;color:var(--sub);font-size:12px;margin-bottom:6px}.info strong{font-size:14px;line-height:1.9;display:block;overflow-wrap:anywhere;white-space:pre-line}.section-tag{font-size:11px;font-weight:900;letter-spacing:1px;color:var(--aqua);margin-bottom:9px}.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.domain-card{border:1px solid #ffffff28;border-radius:20px;padding:23px;background:linear-gradient(130deg,#174760,#0c2b44)}.domain-card h3{font-size:20px;color:#fff;line-height:1.8;margin:8px 0}.pills{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.pill{display:inline-flex;align-items:center;background:#ffffff12;border-radius:40px;padding:5px 12px;font-size:11px}.pill.green{color:var(--green)}.pill.gold{color:var(--gold)}.criterion{margin:16px 0;border:1px solid #ffffff2b;border-radius:19px;overflow:hidden;background:#ffffff05}.criterion-head{padding:19px 22px;background:linear-gradient(110deg,#17516a,#123a55);border-bottom:1px solid #ffffff25}.criterion-head h3{font-size:18px;color:#fff;margin:7px 0;line-height:1.8}.criterion-body{padding:20px}.entries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.entry-column{background:#ffffff06;border:1px solid #ffffff1a;border-radius:16px;padding:17px}.entry-column h4{margin:0 0 14px;font-size:15px}.entry-column h4.good{color:var(--green)}.entry-column h4.warn{color:var(--gold)}.entry{border:1px solid #ffffff1b;border-radius:13px;padding:15px;margin-bottom:12px;background:#ffffff07}.entry p{color:#f7fcff;font-size:13px;line-height:2;white-space:pre-line;overflow-wrap:anywhere;margin:0}.evidence{border-right:3px solid var(--aqua);background:#ffffff0a;padding:12px;margin-top:12px;border-radius:9px;font-size:12px;color:#d4e6ee;line-height:2;white-space:pre-line;overflow-wrap:anywhere}.evidence b{display:block;color:var(--aqua);margin-bottom:4px}.empty{padding:20px;border:1px dashed #ffffff33;color:var(--sub);text-align:center;border-radius:13px;font-size:13px}.search{width:100%;background:#ffffff0e;border:1px solid #ffffff35;color:white;padding:13px 17px;border-radius:13px;outline:none;margin:10px 0 18px}.search::placeholder{color:#b3c9d7}.compass{border:1px solid #e8c47b77;background:radial-gradient(circle at 10% 20%,#e8c47b20,transparent 35%),linear-gradient(130deg,#1b4556,#0b293e);border-radius:21px;padding:26px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.compass h2{margin:0 0 8px;color:var(--gold);font-size:22px}.compass p{color:#d5e4eb;margin:0;line-height:2}.compass-icon{font-size:45px}.status{text-align:center;color:var(--sub);font-size:11px;padding:12px}.footer{text-align:center;padding:20px;color:#abc5d4;font-size:12px;border-top:1px solid var(--line)}.hint{font-size:12px;color:var(--sub)}.loading{text-align:center;padding:60px;font-size:19px;color:var(--aqua)}.review-mode main{max-width:1700px}.review-mode .hero{padding:50px}.review-mode .card{padding:29px}.review-mode .criterion-head{padding:25px}.review-mode .entry p{font-size:15px}.hide{display:none!important}
-@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:700px){.shell{padding:0 13px}.hero{padding:23px}.grid,.info-grid,.split,.entries{grid-template-columns:1fr}.card{padding:17px}.criterion-body{padding:12px}.topbar{align-items:flex-start}.brand h2{font-size:16px}}
-@media print{header,.tools,.nav,.search,.btn{display:none!important}body{background:white;color:#111}.hero,.card,.criterion,.entry,.info,.compass{background:white;color:#111;border:1px solid #aaa;break-inside:avoid}.hero h1,.card h2,.criterion h3,.entry p,.info strong{color:#111}.hero p,.card p{color:#444}}
+:root {
+ --bg:#06192b;
+ --surface:#0c2b45;
+ --line:#ffffff24;
+ --text:#f5fbff;
+ --sub:#bad0dd;
+ --aqua:#66e0de;
+ --gold:#f1cd83;
+ --green:#92e3ba;
+}
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Cairo,Tahoma,sans-serif;
+ color:var(--text);
+ background:radial-gradient(circle at 85% -10%,#14608055,transparent 35%),var(--bg);
+}
+button,input{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+header{
+ position:sticky;top:0;z-index:10;
+ background:#06192bf2;
+ backdrop-filter:blur(16px);
+ border-bottom:1px solid var(--line);
+}
+.top{
+ max-width:1500px;margin:auto;padding:12px 3%;
+ display:flex;align-items:center;justify-content:space-between;
+ gap:12px;flex-wrap:wrap;
+}
+.brand{display:flex;gap:13px;align-items:center}
+.emblem{
+ height:58px;width:58px;border-radius:15px;
+ background:#fff;padding:3px;
+ display:grid;place-items:center;
+ border:1px solid #ffffff44;
+ overflow:hidden;
+}
+.emblem img{width:100%;height:100%;object-fit:contain;border-radius:10px}
+.brand b{font-size:20px}
+.brand small{display:block;color:var(--sub)}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{
+ background:#ffffff12;border:1px solid #ffffff35;
+ color:white;border-radius:12px;padding:9px 15px;font-weight:800;
+}
+.btn:hover,.tab:hover{background:#ffffff24}
+.btn.primary{
+ background:linear-gradient(130deg,#167a94,#175a81);
+ border-color:#6ddde35c;
+}
+.btn.gold{background:#efc775;color:#092339;border:0}
+.tabs{
+ max-width:1500px;margin:auto;display:flex;gap:8px;
+ overflow-x:auto;padding:0 3% 13px;scrollbar-width:thin;
+}
+.tab{
+ border:1px solid var(--line);background:#ffffff08;
+ color:var(--sub);border-radius:12px;padding:9px 15px;
+ white-space:nowrap;font-weight:800;
+}
+.tab.active{background:#136783;color:white;border-color:#73d9e2}
+main{max-width:1500px;margin:auto;padding:28px 3% 80px}
+.hero{
+ padding:40px;border:1px solid #ffffff2b;border-radius:26px;
+ background:radial-gradient(circle at 10% 20%,#19a5aa40,transparent 38%),
+ linear-gradient(125deg,#164767,#09243c);
+ margin-bottom:20px;
+}
+.eyebrow{
+ color:var(--gold);font-weight:900;
+ font-size:13px;letter-spacing:1px;
+}
+h1{font-size:clamp(27px,4vw,48px);margin:7px 0 10px;line-height:1.5}
+h2{font-size:22px;margin:0 0 15px}
+h3{font-size:17px;margin:0 0 10px}
+p{line-height:2;color:var(--sub);margin:7px 0}
+.hero p{font-size:17px;max-width:980px}
+.grid{
+ display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+ gap:13px;margin:17px 0;
+}
+.card{
+ background:linear-gradient(145deg,var(--surface),#092238);
+ border:1px solid var(--line);border-radius:20px;
+ padding:23px;margin-bottom:17px;min-width:0;
+}
+.metric{text-align:center}
+.metric b{
+ display:block;color:var(--aqua);
+ font-size:35px;line-height:1.5;
+}
+.metric span{color:var(--sub);font-size:13px}
+.details{
+ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:12px;
+}
+.field{
+ border:1px solid #ffffff1f;background:#ffffff09;
+ border-radius:14px;padding:14px;min-width:0;
+}
+.field small{display:block;color:var(--sub);margin-bottom:5px}
+.field strong{
+ font-size:15px;line-height:1.9;
+ overflow-wrap:anywhere;white-space:pre-wrap;
+}
+.school-intro{
+ white-space:pre-wrap;
+ line-height:2.25;
+ color:#f4faff;
+ font-size:16px;
+ padding:7px 4px;
+ overflow-wrap:anywhere;
+ max-width:1150px;
+}
+.domain-grid{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:14px;
+}
+.domain{
+ border:1px solid var(--line);
+ background:linear-gradient(130deg,#123b56,#0b263e);
+ border-radius:20px;padding:23px;
+}
+.domain h3{font-size:21px;color:white}
+.pills{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}
+.pill{
+ padding:5px 12px;border-radius:99px;
+ background:#ffffff12;font-size:12px;
+}
+.pill.good{color:var(--green)}
+.pill.warn{color:var(--gold)}
+.standard{
+ margin:0 0 18px;border:1px solid #ffffff2a;
+ border-radius:19px;overflow:hidden;background:#0d2a43;
+}
+.standard-head{
+ padding:19px 21px;
+ background:linear-gradient(100deg,#17465f,#11324b);
+ display:flex;align-items:center;justify-content:space-between;
+ gap:10px;flex-wrap:wrap;
+}
+.standard-head h2{margin:0;color:var(--gold)}
+.standard-body{
+ padding:18px;display:grid;
+ grid-template-columns:1fr 1fr;gap:17px;
+}
+.subhead{font-size:18px;font-weight:900;margin-bottom:12px}
+.subhead.good{color:var(--green)}
+.subhead.warn{color:var(--gold)}
+.entry{
+ background:#ffffff08;border:1px solid #ffffff22;
+ border-radius:14px;padding:16px;margin-bottom:11px;
+}
+.entry .label{
+ font-size:12px;color:var(--aqua);font-weight:900;
+}
+.entry .body{
+ white-space:pre-wrap;overflow-wrap:anywhere;
+ line-height:1.95;margin:8px 0;color:white;
+}
+.evidence{
+ border-right:3px solid var(--aqua);
+ padding:10px 13px;background:#ffffff0a;
+ border-radius:8px;font-size:13px;color:#d1e2eb;
+ white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.9;
+}
+.empty{
+ padding:20px;border:1px dashed #ffffff40;
+ border-radius:12px;color:var(--sub);text-align:center;
+}
+.compass{
+ display:flex;justify-content:space-between;
+ gap:20px;align-items:center;flex-wrap:wrap;
+ background:linear-gradient(110deg,#164b5f,#0b2b47);
+ border-color:#edca8155;
+}
+.compass h2{color:var(--gold)}
+.notice{font-size:12px;color:var(--sub);padding:12px 0}
+.footer{
+ text-align:center;color:var(--sub);
+ font-size:12px;padding:0 12px 25px;
+}
+.loading{text-align:center;padding:80px 10px}
+.presentation main{max-width:1750px}
+.presentation .hero{padding:52px}
+.presentation .entry{font-size:18px}
+.presentation .standard-head h2{font-size:27px}
+.presentation .standard-body{gap:24px}
+.presentation .card{padding:28px}
+.navline{
+ display:flex;gap:10px;
+ justify-content:space-between;flex-wrap:wrap;
+}
+.search{
+ background:#ffffff0e;border:1px solid #ffffff3b;
+ color:white;border-radius:12px;padding:10px 15px;
+ min-width:250px;max-width:100%;outline:none;
+}
+.search::placeholder{color:#b7cedb}
+@media(max-width:900px){
+ .grid{grid-template-columns:repeat(2,1fr)}
+ .details{grid-template-columns:repeat(2,1fr)}
+ .domain-grid,.standard-body{grid-template-columns:1fr}
+}
+@media(max-width:550px){
+ .grid,.details{grid-template-columns:1fr}
+ .hero{padding:23px}
+ .card{padding:17px}
+ .brand b{font-size:16px}
+}
+@media print{
+ header,.navline,.actions{display:none!important}
+ body{background:white;color:black}
+ .hero,.card,.domain,.standard,.entry,.field{
+  background:white;color:black;border:1px solid #bbb;
+ }
+ .entry .body,h1,h2,h3{color:black}
+ p,.field small{color:#333}
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<div class="shell">
-<div class="topbar">
-<div class="brand">
-<div class="brand-mark">✦</div>
-<div>
-<h2>نبض الإجادة | مدرسة أبو الدرداء</h2>
-<small>منصة التقويم الذاتي والتميز المؤسسي · 2026/2027م</small>
-</div>
-</div>
-<div class="tools">
-<button class="btn" onclick="loadData(true)">↻ تحديث البيانات</button>
-<button class="btn primary" onclick="toggleReview()">◉ وضع المراجعة</button>
-<a class="btn gold" href="https://sultanalwaeli.github.io/compass/" target="_blank" rel="noopener noreferrer">◈ البوصلة الاستراتيجية ↗</a>
-</div>
-</div>
-<div class="nav" id="nav"></div>
-</div>
+ <div class="top">
+  <div class="brand">
+   <div class="emblem">
+    <img
+     src="https://c.top4top.io/p_3906f6odb1.jpg"
+     alt="شعار مدرسة أبو الدرداء"
+     loading="eager"
+     referrerpolicy="no-referrer"
+     onerror="this.style.display='none';this.parentElement.textContent='✦'"
+    >
+   </div>
+   <div>
+    <b>نبض الإجادة | أبو الدرداء</b>
+    <small>التقويم الذاتي والتميز المؤسسي · 2026/2027م</small>
+   </div>
+  </div>
+
+  <div class="actions">
+   <button class="btn" onclick="loadData()">↻ تحديث البيانات</button>
+   <button class="btn primary" onclick="togglePresentation()">◉ وضع العرض</button>
+   <a
+    class="btn gold"
+    href="https://sultanalwaeli.github.io/compass/"
+    target="_blank"
+    rel="noopener noreferrer"
+   >✧ البوصلة الاستراتيجية ↗</a>
+  </div>
+ </div>
+ <nav class="tabs" id="tabs"></nav>
 </header>
-<main class="shell" id="app">
-<div class="loading">جارٍ تحميل بيانات مدرسة أبو الدرداء...</div>
+
+<main id="app">
+ <div class="loading">جارٍ تحميل قاعدة بيانات أبو الدرداء…</div>
 </main>
-<div class="status" id="status"></div>
-<footer class="footer">مدرسة أبو الدرداء للبنين (5–12) · نبض الإجادة · التقويم الذاتي والتحسين المستمر</footer>
+
+<footer class="footer">
+ مدرسة أبو الدرداء للبنين (5–12) · الرمز المدرسي 7237
+ <div id="status"></div>
+</footer>
+
 <script>
-"use strict";
-const API_URL="https://script.google.com/macros/s/AKfycbwPtbrsr5nRkxh1k-AKQWVgLlSYlUuhPvTo0lGqBkwl97HS9c05F2w_sC-tzUcAvtPN9Q/exec";
-const COMPASS_URL="https://sultanalwaeli.github.io/compass/";
-const CACHE_KEY="abu_dardaa_excellence_pro_v2";
-const DOMAIN_NAMES=["الإنجاز الدراسي","النمو الشخصي","التدريس والتقويم","مناخ المدرسة وبيئة التعلم","القيادة والإدارة والحوكمة"];
-let db=null,page="identity",review=false,requestId=0,searchTerm="";
-const $=id=>document.getElementById(id);
-function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function norm(v){return String(v??"").trim()}
-function filled(v){return norm(v)!==""}
-function safeUrl(v){try{const u=new URL(norm(v));return ["https:","http:"].includes(u.protocol)?u.href:""}catch{return ""}}
-function fmt(v){const s=norm(v),u=safeUrl(s);if(u)return `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer" style="color:var(--aqua);text-decoration:underline">فتح الشاهد أو الرابط ↗</a>`;return esc(s).replace(/\n/g,"<br>")}
-function sheet(name){return db?.sheets?.[name]||{rows:[],headers:[]}}
-function identityRows(){return sheet("هوية المدرسة").rows||[]}
-function field(row,aliases){for(const alias of aliases){for(const [k,v] of Object.entries(row||{})){if(norm(k)===alias&&filled(v))return norm(v)}}return ""}
-function identityValue(...aliases){for(const r of identityRows()){const v=field(r,aliases);if(v)return v}return ""}
-function info(label,value){return filled(value)?`<div class="info"><small>${esc(label)}</small><strong>${fmt(value)}</strong></div>`:""}
-function box(title,content){return `<section class="card"><h2>${esc(title)}</h2>${content}</section>`}
-function hero(kicker,title,description){return `<div class="hero"><div class="eyebrow">${esc(kicker)}</div><h1>${esc(title)}</h1><p>${esc(description)}</p></div>`}
-function stat(value,label){return `<div class="card stat"><b>${esc(value)}</b><span>${esc(label)}</span></div>`}
-function domains(){return DOMAIN_NAMES.map((name,i)=>db?.domains?.find(d=>d.name===name)||{id:i+1,name,strengths:[],improvements:[]})}
-function navigate(p){page=p;searchTerm="";render();window.scrollTo({top:0,behavior:"smooth"})}
-function nav(){const pages=[["identity","01 · البيانات الأساسية"],["overview","02 · التحليل الذاتي"],...DOMAIN_NAMES.map((n,i)=>["domain"+i,(i+1)+" · "+n])];$("nav").innerHTML=pages.map(([id,label])=>`<button class="${page===id?"active":""}" onclick="navigate('${id}')">${esc(label)}</button>`).join("")}
+'use strict';
+
+const API =
+'https://script.google.com/macros/s/AKfycbwPtbrsr5nRkxh1k-AKQWVgLlSYlUuhPvTo0lGqBkwl97HS9c05F2w_sC-tzUcAvtPN9Q/exec';
+
+const CACHE='ad-excellence-sheet-v3';
+
+const NAMES=[
+ 'الإنجاز الدراسي',
+ 'النمو الشخصي',
+ 'التدريس والتقويم',
+ 'مناخ المدرسة وبيئة التعلم',
+ 'القيادة والإدارة والحوكمة'
+];
+
+let db=null;
+let page='identity';
+let present=false;
+let serial=0;
+let searchTerm='';
+
+const el=id=>document.getElementById(id);
+
+const trim=x=>String(x??'').trim();
+
+const norm=x=>trim(x).replace(/\s+/g,' ');
+
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({
+ '&':'&amp;',
+ '<':'&lt;',
+ '>':'&gt;',
+ '"':'&quot;',
+ "'":'&#39;'
+}[c]));
+
+function field(row,key){
+ const wanted=norm(key);
+ for(const [k,v] of Object.entries(row||{})){
+  if(norm(k)===wanted)return trim(v);
+ }
+ return '';
+}
+
+function sheet(name){
+ return db?.sheets?.[name]?.rows||[];
+}
+
+function value(key){
+ for(const r of sheet('هوية المدرسة')){
+  const v=field(r,key);
+  if(v)return v;
+ }
+ return field(db?.school,key);
+}
+
+function info(k,v){
+ return v
+ ?`<div class="field">
+    <small>${esc(k)}</small>
+    <strong>${esc(v)}</strong>
+   </div>`
+ :'';
+}
+
+function card(title,body){
+ return `<section class="card">
+  <h2>${esc(title)}</h2>${body}
+ </section>`;
+}
+
+function metric(n,l){
+ return `<div class="card metric">
+  <b>${esc(n)}</b>
+  <span>${esc(l)}</span>
+ </div>`;
+}
+
+function hero(k,t,d){
+ return `<section class="hero">
+  <div class="eyebrow">${esc(k)}</div>
+  <h1>${esc(t)}</h1>
+  <p>${esc(d)}</p>
+ </section>`;
+}
+
+function compass(){
+ return `<section class="card compass">
+  <div>
+   <div class="eyebrow">STRATEGIC COMPASS</div>
+   <h2>بوصلة أبو الدرداء الاستراتيجية</h2>
+   <p>للاطلاع على الأهداف الاستراتيجية وأهداف العام الدراسي،
+   انتقل إلى المنصة المتخصصة.</p>
+  </div>
+  <a class="btn gold"
+   href="https://sultanalwaeli.github.io/compass/"
+   target="_blank"
+   rel="noopener noreferrer">
+   استكشاف البوصلة ↗
+  </a>
+ </section>`;
+}
+
 function identity(){
- const rows=identityRows(),name=identityValue("اسم المدرسة")||"مدرسة أبو الدرداء للبنين (5–12)";
- const total=identityValue("إجمالي الطلبة","عدد الطلبة","عدد الطلاب")||"668";
- const code=identityValue("الرمز المدرسي","رمز المدرسة")||"7237";
- const year=identityValue("العام الدراسي","السنة الدراسية")||"2026/2027";
- let html=hero("01 · SCHOOL IDENTITY","البيانات الأساسية للمدرسة","أبو الدرداء... مدرسة تصنع المعرفة، وتستثمر الطاقات، وتؤمن بأن جودة التعليم تُقاس بأثرها في تعلم الطلبة.");
- html+=`<div class="grid">${stat(code,"الرمز المدرسي")}${stat(year,"العام الدراسي")}${stat(total,"إجمالي الطلبة")}${stat("5","مجالات التقويم الذاتي")}</div>`;
- const identityKeys=["اسم المدرسة","الرمز المدرسي","العام الدراسي","المحافظة","الولاية","القرية","المديرية","نوع المدرسة","نوع المبنى","تاريخ تشغيل المبنى","سنة تشغيل المبنى","الصفوف الدراسية","الصفوف التي تخدمها المدرسة","بداية الدوام","نهاية الدوام"];
- const peopleKeys=["مدير المدرسة","مدير المدرسة المساعد","المدير المساعد","مشرف الإدارة المدرسية","عدد المعلمين","المعلمون","عدد المعلمين الأوائل","المعلمون الأوائل","عدد الإداريين","عدد الاختصاصيين","الاختصاصيون","عدد الفنيين","الفنيون"];
- const studentKeys=["إجمالي الطلبة","عدد الطلبة","عدد الطلاب","طلبة الصفوف (5-8)","عدد طلبة الصفوف 5-8","طلبة الصفوف (9-12)","عدد طلبة الصفوف 9-12","عدد الشعب","نسبة الطلبة العمانيين","نسبة غير العمانيين","نسبة الطلبة غير العمانيين","متوسط الحضور"];
- function sectionByKeys(title,keys){const found=keys.map(k=>info(k,identityValue(k))).filter(Boolean);return found.length?box(title,`<div class="info-grid">${found.join("")}</div>`):""}
- html+=sectionByKeys("01 · الهوية والموقع",identityKeys);
- html+=sectionByKeys("02 · القيادة والموارد البشرية",peopleKeys);
- html+=sectionByKeys("03 · المجتمع الطلابي",studentKeys);
- const vision=identityValue("الرؤية","رؤية المدرسة"),mission=identityValue("الرسالة","رسالة المدرسة");
- if(vision||mission)html+=box("04 · الرؤية والرسالة",`${vision?`<h3>رؤيتنا</h3><p>${fmt(vision)}</p>`:""}${mission?`<h3>رسالتنا</h3><p>${fmt(mission)}</p>`:""}`);
- const used=new Set([...identityKeys,...peopleKeys,...studentKeys,"الرؤية","رؤية المدرسة","الرسالة","رسالة المدرسة","الأهداف الاستراتيجية","الهدف الاستراتيجي","الأهداف السنوية","أهداف العام الدراسي"]);
- const extras=[],seen=new Set();
- rows.forEach(row=>Object.entries(row).forEach(([key,value])=>{
-  if(used.has(norm(key))||!filled(value))return;
-  const id=key+"|"+value;if(seen.has(id))return;seen.add(id);extras.push([key,value]);
+ let s=hero(
+  '01 · SCHOOL PROFILE',
+  'البيانات الأساسية للمدرسة',
+  'أبو الدرداء: الهوية والمكونات والمكنونات والرؤية والرسالة والمجتمع المدرسي.'
+ );
+
+ const total=value('إجمالي الطلبة')||value('عدد الطلبة')||'—';
+
+ s+=`<div class="grid">
+  ${metric(value('الرمز المدرسي')||'7237','الرمز المدرسي')}
+  ${metric(total,'إجمالي الطلبة')}
+  ${metric(value('عدد الشعب')||'—','عدد الشعب')}
+  ${metric('5','مجالات التقويم')}
+ </div>`;
+
+ const groups=[
+  [
+   '01 · الهوية والموقع',
+   [
+    'اسم المدرسة','الرمز المدرسي','السنة الدراسية',
+    'المديرية','المحافظة','الولاية','القرية',
+    'المرحلة أو الصف','نوع المدرسة',
+    'سنة تشغيل المبنى','سنة إنشاء المدرسة',
+    'بداية الدوام','نهاية الدوام'
+   ]
+  ],
+  [
+   '02 · المجتمع الطلابي',
+   [
+    'عدد الطلبة (5-8)','عدد الطلبة (9-12)',
+    'إجمالي الطلبة','عدد الشعب (5-8)',
+    'عدد الشعب (9-12)','عدد الشعب',
+    'عدد الطلبة','عدد الطلاب',
+    'الطلبة العمانيون','الطلبة غير العمانيين'
+   ]
+  ],
+  [
+   '03 · القيادة والموارد البشرية',
+   [
+    'مدير المدرسة','المدير المساعد',
+    'مشرف الإدارة المدرسية','المعلمون',
+    'المعلمون الأوائل','الاختصاصيون',
+    'الفنيون','الهيئة التعليمية',
+    'الهيئة الإدارية','عدد المعلمين',
+    'عدد الإداريين','عدد الفنيين'
+   ]
+  ]
+ ];
+
+ const used=new Set();
+
+ for(const [title,keys] of groups){
+  const entries=keys.map(k=>{
+   used.add(norm(k));
+   return info(k,value(k));
+  }).filter(Boolean);
+
+  if(entries.length){
+   s+=card(
+    title,
+    `<div class="details">${entries.join('')}</div>`
+   );
+  }
+ }
+
+ const intro=value('نبذة عامة عن المدرسة');
+ const vision=value('رؤية المدرسة');
+ const mission=value('رسالة المدرسة');
+
+ [
+  'نبذة عامة عن المدرسة',
+  'رؤية المدرسة',
+  'رسالة المدرسة'
+ ].forEach(k=>used.add(norm(k)));
+
+ // الرؤية والرسالة في قسم مستقل
+ if(vision||mission){
+  s+=card(
+   '04 · رؤيتنا ورسالتنا',
+   `${vision
+    ?`<h3 style="color:var(--gold)">الرؤية</h3>
+      <p style="color:white">${esc(vision)}</p>`
+    :''
+   }
+   ${mission
+    ?`<h3 style="color:var(--gold);margin-top:18px">الرسالة</h3>
+      <p style="color:white">${esc(mission)}</p>`
+    :''
+   }`
+  );
+ }
+
+ // نبذة المدرسة تظهر أسفل الرؤية والرسالة بعرض الصفحة
+ if(intro){
+  s+=card(
+   '05 · نبذة عن المدرسة',
+   `<div class="school-intro">${esc(intro)}</div>`
+  );
+ }
+
+ // بقية بيانات المدرسة في بطاقات متناسقة
+ const extras=[];
+
+ for(const r of sheet('هوية المدرسة')){
+  for(const [k,v] of Object.entries(r)){
+   if(
+    !used.has(norm(k)) &&
+    trim(v) &&
+    !norm(k).includes('الأهداف الاستراتيجية') &&
+    !norm(k).includes('أهداف العام الدراسي')
+   ){
+    extras.push(info(k,v));
+    used.add(norm(k));
+   }
+  }
+ }
+
+ if(extras.length){
+  s+=card(
+   '06 · مرافق المدرسة ومكوناتها ومكنوناتها',
+   `<div class="details">${extras.join('')}</div>`
+  );
+ }
+
+ s+=compass();
+
+ s+=`<section class="card" style="text-align:center">
+  <h2>المرحلة التالية: التحليل الذاتي للمدرسة</h2>
+  <p>خمسة مجالات، ومعايير واضحة، وأدلة موثقة
+  لجوانب الإجادة والتحسين.</p>
+  <button class="btn primary" onclick="navigate('overview')">
+   الانتقال إلى التحليل الذاتي ←
+  </button>
+ </section>`;
+
+ return s;
+}
+
+function rowsOf(name){
+ return sheet(name).map(r=>({
+  criterion:field(r,'المعيار')||'معيار غير محدد',
+  strength:field(r,'جوانب الإجادة'),
+  strengthEvidence:field(r,'أدلة الإجادة'),
+  improvement:field(r,'جوانب التحسين'),
+  improvementEvidence:field(r,'أدلة التحسين')
  }));
- if(extras.length)html+=box("05 · مكونات المدرسة ومكنوناتها",`<div class="info-grid">${extras.map(([k,v])=>info(k,v)).join("")}</div>`);
- html+=`<div class="compass"><div><div class="section-tag">STRATEGIC DIRECTION</div><h2>بوصلة أبو الدرداء الاستراتيجية</h2><p>تعرّف إلى الأهداف الاستراتيجية للمدرسة وأهداف العام الدراسي من خلال منصتنا التفاعلية المستقلة.</p></div><a class="btn gold" href="${COMPASS_URL}" target="_blank" rel="noopener noreferrer">استكشف البوصلة الاستراتيجية ↗</a></div>`;
- html+=`<div class="card" style="text-align:center"><h2>من هويتنا إلى تحليل أدائنا</h2><p>اكتشف المجالات الخمسة ومعاييرها وجوانب الإجادة والتحسين وشواهدها.</p><button class="btn primary" onclick="navigate('overview')">الانتقال إلى التحليل الذاتي ←</button></div>`;
- return html;
 }
-function domainRecords(name){
- const raw=sheet(name).rows||[];
- return raw.map((r,i)=>({
-  index:i,
-  criterion:field(r,["المعيار","المعيار الفرعي","معيار التقويم","المعيار/المؤشر"]),
-  strength:field(r,["جوانب الإجادة","جانب الإجادة","جوانب الاجادة"]),
-  strengthEvidence:field(r,["أدلة الإجادة","دليل الإجادة","أدلة الاجادة"]),
-  improvement:field(r,["جوانب التحسين","جانب التحسين","الجوانب التي تحتاج إلى تحسين"]),
-  improvementEvidence:field(r,["أدلة التحسين","دليل التحسين"])
- })).filter(r=>r.criterion||r.strength||r.improvement||r.strengthEvidence||r.improvementEvidence);
+
+function totals(name){
+ const rows=rowsOf(name);
+ return {
+  criteria:new Set(rows.map(r=>r.criterion)).size,
+  strengths:rows.filter(r=>r.strength).length,
+  improvements:rows.filter(r=>r.improvement).length
+ };
 }
-function grouped(name){
- const records=domainRecords(name),groups=[],map=new Map();
- records.forEach(r=>{
-  const criterion=r.criterion||"بنود المجال غير المصنفة بمعيار";
-  if(!map.has(criterion)){const g={criterion,items:[]};map.set(criterion,g);groups.push(g)}
-  map.get(criterion).items.push(r);
- });
- return groups;
-}
-function counts(name){
- const rows=domainRecords(name);
- return {strengths:rows.filter(r=>r.strength).length,improvements:rows.filter(r=>r.improvement).length,criteria:new Set(rows.map(r=>r.criterion).filter(Boolean)).size,evidence:rows.filter(r=>r.strengthEvidence||r.improvementEvidence).length};
-}
+
 function overview(){
- const stats=DOMAIN_NAMES.map(counts),s=stats.reduce((a,b)=>({strengths:a.strengths+b.strengths,improvements:a.improvements+b.improvements,criteria:a.criteria+b.criteria,evidence:a.evidence+b.evidence}),{strengths:0,improvements:0,criteria:0,evidence:0});
- let html=hero("02 · SCHOOL SELF-EVALUATION","التحليل الذاتي للمدرسة","قراءة مؤسسية شاملة، تبدأ بالمعيار وتنتهي بالدليل، وتكشف جوانب الإجادة وفرص التحسين في المجالات الخمسة.");
- html+=`<div class="grid">${stat("5","مجالات التقويم")}${stat(s.criteria,"المعايير المدرجة")}${stat(s.strengths,"جوانب الإجادة")}${stat(s.improvements,"جوانب التحسين")}</div><div class="split">`;
- DOMAIN_NAMES.forEach((name,i)=>{const c=stats[i];html+=`<article class="domain-card"><div class="section-tag">المجال ${i+1} من 5</div><h3>${esc(name)}</h3><div class="pills"><span class="pill">${c.criteria} معايير</span><span class="pill green">${c.strengths} جوانب إجادة</span><span class="pill gold">${c.improvements} جوانب تحسين</span></div><p style="color:var(--sub);font-size:13px">استعراض المعايير وجوانب الأداء والأدلة والشواهد المرتبطة بها.</p><button class="btn primary" onclick="navigate('domain${i}')">استكشاف المجال ←</button></article>`});
- html+="</div>";
- html+=box("منهجية التقويم الذاتي",`<p>تُعرض بيانات التقويم الذاتي وفق تسلسل: <strong style="color:var(--aqua)">المجال ← المعيار ← جانب الإجادة أو التحسين ← الدليل</strong>. وتستمد المنصة معلوماتها من جدول البيانات المعتمد بالمدرسة دون افتراض نتائج أو أحكام غير موثقة.</p>`);
- return html;
+ const sum=NAMES.map(totals);
+
+ let s=hero(
+  '02 · SCHOOL SELF-EVALUATION',
+  'التحليل الذاتي للمدرسة',
+  'مجالات التقويم الخمسة ومعاييرها، وما يقابل كل معيار من جوانب الإجادة وفرص التحسين والأدلة الداعمة.'
+ );
+
+ s+=`<div class="grid">
+  ${metric('5','مجالات التقويم')}
+  ${metric(sum.reduce((a,b)=>a+b.criteria,0),'المعايير المدرجة')}
+  ${metric(sum.reduce((a,b)=>a+b.strengths,0),'جوانب الإجادة')}
+  ${metric(sum.reduce((a,b)=>a+b.improvements,0),'جوانب التحسين')}
+ </div>`;
+
+ s+='<div class="domain-grid">';
+
+ NAMES.forEach((name,i)=>{
+  const x=sum[i];
+
+  s+=`<article class="domain">
+   <div class="eyebrow">المجال ${i+1} من 5</div>
+   <h3>${esc(name)}</h3>
+   <div class="pills">
+    <span class="pill">${x.criteria} معايير</span>
+    <span class="pill good">${x.strengths} إجادة</span>
+    <span class="pill warn">${x.improvements} تحسين</span>
+   </div>
+   <button class="btn primary" onclick="navigate('domain${i}')">
+    استعراض المعايير والأدلة ←
+   </button>
+  </article>`;
+ });
+
+ s+='</div>';
+ s+=compass();
+
+ return s;
 }
-function entry(text,evidence,label){
- if(!text&&!evidence)return "";
- return `<article class="entry"><p>${text?fmt(text):"لم يدرج نص الجانب"}</p>${evidence?`<div class="evidence"><b>الدليل والشاهد</b>${fmt(evidence)}</div>`:""}</article>`;
+
+function item(t,e,n,kind){
+ return `<article class="entry">
+  <div class="label">
+   ${kind==='good'?'جانب إجادة':'جانب يحتاج إلى تحسين'} · ${n}
+  </div>
+  <div class="body">${esc(t)}</div>
+  ${e
+   ?`<div class="evidence">
+      <b>الدليل والشاهد</b>
+      <div>${esc(e)}</div>
+     </div>`
+   :'<div class="notice">لم يُدرج دليل لهذا البند في الجدول.</div>'
+  }
+ </article>`;
 }
-function criterionCard(group,index){
- const good=group.items.filter(r=>r.strength||r.strengthEvidence),bad=group.items.filter(r=>r.improvement||r.improvementEvidence);
- return `<section class="criterion"><div class="criterion-head"><div class="section-tag">المعيار ${index+1}</div><h3>${esc(group.criterion)}</h3><div class="pills"><span class="pill green">${good.length} جوانب إجادة</span><span class="pill gold">${bad.length} جوانب تحسين</span></div></div><div class="criterion-body"><div class="entries"><div class="entry-column"><h4 class="good">✦ جوانب الإجادة وأدلتها</h4>${good.length?good.map(r=>entry(r.strength,r.strengthEvidence,"good")).join(""):'<div class="empty">لم تُسجل جوانب إجادة لهذا المعيار.</div>'}</div><div class="entry-column"><h4 class="warn">◈ جوانب التحسين وأدلتها</h4>${bad.length?bad.map(r=>entry(r.improvement,r.improvementEvidence,"warn")).join(""):'<div class="empty">لم تُسجل جوانب تحسين لهذا المعيار.</div>'}</div></div></div></section>`;
+
+function domain(i){
+ const name=NAMES[i];
+ const rows=rowsOf(name);
+ const groups=new Map();
+
+ for(const r of rows){
+  const k=norm(r.criterion)||'معيار غير محدد';
+
+  if(!groups.has(k))groups.set(k,[]);
+  groups.get(k).push(r);
+ }
+
+ let s=hero(
+  `المجال ${i+1} من 5`,
+  name,
+  'عرض التقويم وفق المعيار، مع المحافظة على النصوص والأدلة الواردة في قاعدة البيانات.'
+ );
+
+ const x=totals(name);
+
+ s+=`<div class="grid">
+  ${metric(x.criteria,'المعايير')}
+  ${metric(x.strengths,'جوانب الإجادة')}
+  ${metric(x.improvements,'جوانب التحسين')}
+  ${metric(rows.length,'صفوف البيانات')}
+ </div>`;
+
+ s+=`<section class="card">
+  <div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap">
+   <h2 style="margin:0">معايير المجال</h2>
+   <input
+    class="search"
+    aria-label="بحث في المجال"
+    placeholder="ابحث عن معيار أو شاهد…"
+    value="${esc(searchTerm)}"
+    oninput="searchTerm=this.value;filterStandards()"
+   >
+  </div>
+  <div class="pills">
+   ${[...groups.keys()].map((k,j)=>
+    `<a class="pill" href="#criterion-${i}-${j}">${esc(k)}</a>`
+   ).join('')}
+  </div>
+ </section>`;
+
+ let j=0;
+
+ for(const [criterion,entries] of groups){
+  const strengths=entries.filter(r=>r.strength);
+  const improvements=entries.filter(r=>r.improvement);
+
+  const searchText=norm([
+   criterion,
+   ...entries.flatMap(r=>[
+    r.strength,
+    r.strengthEvidence,
+    r.improvement,
+    r.improvementEvidence
+   ])
+  ].join(' ')).toLowerCase();
+
+  s+=`<section
+   class="standard"
+   id="criterion-${i}-${j++}"
+   data-search="${esc(searchText)}"
+  >
+   <div class="standard-head">
+    <div>
+     <div class="eyebrow">المعيار</div>
+     <h2>${esc(criterion)}</h2>
+    </div>
+    <div class="pills">
+     <span class="pill good">${strengths.length} إجادة</span>
+     <span class="pill warn">${improvements.length} تحسين</span>
+    </div>
+   </div>
+
+   <div class="standard-body">
+    <div>
+     <div class="subhead good">✦ جوانب الإجادة وأدلتها</div>
+     ${strengths.length
+      ?strengths.map((r,k)=>
+       item(r.strength,r.strengthEvidence,k+1,'good')
+      ).join('')
+      :'<div class="empty">لم تُسجل جوانب إجادة لهذا المعيار.</div>'
+     }
+    </div>
+
+    <div>
+     <div class="subhead warn">◈ جوانب التحسين وأدلتها</div>
+     ${improvements.length
+      ?improvements.map((r,k)=>
+       item(r.improvement,r.improvementEvidence,k+1,'warn')
+      ).join('')
+      :'<div class="empty">لم تُسجل جوانب تحسين لهذا المعيار.</div>'
+     }
+    </div>
+   </div>
+  </section>`;
+ }
+
+ if(!groups.size){
+  s+='<div class="empty">لم تتوفر بيانات لهذا المجال في الاستجابة الحالية.</div>';
+ }
+
+ s+=`<div class="navline">
+  <button class="btn"
+   onclick="navigate('${i===0?'overview':'domain'+(i-1)}')">
+   → السابق
+  </button>
+  <button class="btn primary"
+   onclick="navigate('${i===4?'identity':'domain'+(i+1)}')">
+   ${i===4?'العودة للبيانات الأساسية':'المجال التالي ←'}
+  </button>
+ </div>`;
+
+ return s;
 }
-function domainPage(i){
- const name=DOMAIN_NAMES[i];if(!name)return overview();
- const c=counts(name),groups=grouped(name);
- let html=hero(`المجال ${i+1} من 5`,name,"قراءة تفصيلية لمعايير المجال، وجوانب الإجادة والتحسين، والأدلة الداعمة لكل جانب.");
- html+=`<div class="grid">${stat(c.criteria,"المعايير")}${stat(c.strengths,"جوانب الإجادة")}${stat(c.improvements,"جوانب التحسين")}${stat(c.evidence,"بنود تتضمن أدلة")}</div>`;
- html+=`<div class="card"><h2>استكشف معايير المجال</h2><p class="hint">يمكنك البحث باسم المعيار أو بكلمة واردة في جوانب الإجادة أو التحسين أو أدلتها.</p><input class="search" id="criterionSearch" placeholder="ابحث داخل هذا المجال..." oninput="filterCriteria(this.value)"><div id="criteriaContent">${groups.length?groups.map(criterionCard).join(""):'<div class="empty">لم تُدرج بيانات المعايير لهذا المجال في جدول البيانات بعد.</div>'}</div></div>`;
- html+=`<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><button class="btn" onclick="navigate('${i===0?"overview":"domain"+(i-1)}')">→ السابق</button><button class="btn primary" onclick="navigate('${i===4?"overview":"domain"+(i+1)}')">${i===4?"العودة إلى التحليل الذاتي":"المجال التالي ←"}</button></div>`;
- return html;
+
+function filterStandards(){
+ const q=norm(searchTerm).toLowerCase();
+
+ document.querySelectorAll('.standard').forEach(e=>{
+  e.style.display=e.dataset.search.includes(q)?'':'none';
+ });
 }
-function filterCriteria(q){
- searchTerm=norm(q).toLowerCase();
- const i=Number(page.replace("domain","")),groups=grouped(DOMAIN_NAMES[i]);
- const filtered=groups.map(g=>{
-  if(g.criterion.toLowerCase().includes(searchTerm))return g;
-  return {...g,items:g.items.filter(r=>[r.criterion,r.strength,r.strengthEvidence,r.improvement,r.improvementEvidence].some(v=>norm(v).toLowerCase().includes(searchTerm)))};
- }).filter(g=>g.items.length);
- $("criteriaContent").innerHTML=filtered.length?filtered.map(criterionCard).join(""):'<div class="empty">لا توجد نتائج مطابقة للبحث.</div>';
+
+function render(){
+ const pages=[
+  ['identity','البيانات الأساسية'],
+  ['overview','التحليل الذاتي'],
+  ...NAMES.map((n,i)=>['domain'+i,n])
+ ];
+
+ el('tabs').innerHTML=pages.map(([id,t])=>
+  `<button
+   class="tab ${page===id?'active':''}"
+   onclick="navigate('${id}')">
+   ${esc(t)}
+  </button>`
+ ).join('');
+
+ if(!db){
+  el('app').innerHTML='<div class="loading">جارٍ تحميل البيانات…</div>';
+  return;
+ }
+
+ el('app').innerHTML=
+  page==='identity'
+  ?identity()
+  :page==='overview'
+   ?overview()
+   :domain(Math.max(
+     0,
+     Math.min(4,Number(page.replace('domain',''))||0)
+    ));
+
+ if(page.startsWith('domain'))filterStandards();
 }
-function render(){nav();if(!db){$("app").innerHTML='<div class="loading">جارٍ تحميل البيانات...</div>';return}$("app").innerHTML=page==="identity"?identity():page==="overview"?overview():page.startsWith("domain")?domainPage(Number(page.replace("domain",""))):identity()}
-function setStatus(s){$("status").textContent=s}
-function valid(data){return data&&data.success===true&&data.sheets&&Array.isArray(data.domains)}
-function loadData(manual=false){
- const n=++requestId,cb="abuDardaaProCallback_"+n,script=document.createElement("script");let done=false;
- setStatus("جارٍ تحديث البيانات من Google Sheets...");
- const timeout=setTimeout(()=>fail("انتهت مهلة الاتصال"),20000);
- function cleanup(){clearTimeout(timeout);delete window[cb];script.remove()}
- function fail(reason){if(done)return;done=true;cleanup();if(db){setStatus("تعذر التحديث؛ تُعرض آخر بيانات محفوظة. "+reason)}else{$("app").innerHTML=`<div class="card"><h2>تعذر تحميل البيانات</h2><p>تحقق من اتصال الإنترنت ورابط Google Apps Script وصلاحية النشر.</p><button class="btn primary" onclick="loadData(true)">إعادة المحاولة</button></div>`;setStatus(reason)}}
- window[cb]=function(data){if(done)return;if(!valid(data)){fail("استجابة غير صالحة من خدمة البيانات");return}done=true;cleanup();db=data;try{localStorage.setItem(CACHE_KEY,JSON.stringify(data))}catch(e){}render();setStatus("آخر تحديث ناجح: "+new Date().toLocaleString("ar-OM"))};
- script.onerror=()=>fail("تعذر الوصول إلى خدمة البيانات");
- script.src=API_URL+"?callback="+encodeURIComponent(cb)+"&_="+Date.now();
+
+function navigate(p){
+ page=p;
+ searchTerm='';
+ render();
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function status(t){
+ el('status').textContent=t;
+}
+
+function valid(d){
+ return d&&
+ d.success===true&&
+ d.sheets&&
+ typeof d.sheets==='object';
+}
+
+function loadData(){
+ const n=++serial;
+ const cb='adExcellence_'+n;
+ const script=document.createElement('script');
+
+ let done=false;
+
+ status('جارٍ تحديث البيانات من Google Sheets…');
+
+ const timer=setTimeout(
+  ()=>fail('انتهت مهلة الاتصال'),
+  20000
+ );
+
+ function clear(){
+  clearTimeout(timer);
+  delete window[cb];
+  script.remove();
+ }
+
+ function fail(msg){
+  if(done)return;
+
+  done=true;
+  clear();
+
+  status(
+   'تعذر التحديث: '+msg+
+   (db?' · تُعرض آخر نسخة ناجحة':'')
+  );
+
+  if(!db){
+   el('app').innerHTML=`<section class="card">
+    <h2>تعذر الاتصال</h2>
+    <p>تحقق من رابط خدمة Google Apps Script وصلاحية النشر.</p>
+    <button class="btn primary" onclick="loadData()">
+     إعادة المحاولة
+    </button>
+   </section>`;
+  }
+ }
+
+ window[cb]=function(d){
+  if(!valid(d)){
+   fail('البيانات غير صالحة');
+   return;
+  }
+
+  if(done)return;
+
+  done=true;
+  clear();
+
+  db=d;
+
+  try{
+   localStorage.setItem(CACHE,JSON.stringify(d));
+  }catch(e){}
+
+  render();
+
+  status(
+   'آخر تحديث ناجح: '+
+   new Date().toLocaleString('ar-OM')
+  );
+ };
+
+ script.onerror=()=>fail('تعذر الوصول إلى الخدمة');
+
+ script.src=API+
+  '?callback='+cb+
+  '&_='+Date.now();
+
  document.head.appendChild(script);
 }
-function toggleReview(){
- review=!review;document.body.classList.toggle("review-mode",review);
- if(review){document.documentElement.requestFullscreen?.().catch(()=>{})}
- else if(document.fullscreenElement){document.exitFullscreen?.().catch(()=>{})}
+
+function togglePresentation(){
+ present=!present;
+
+ document.body.classList.toggle('presentation',present);
+
+ if(present){
+  document.documentElement.requestFullscreen?.().catch(()=>{});
+ }else if(document.fullscreenElement){
+  document.exitFullscreen?.().catch(()=>{});
+ }
 }
-document.addEventListener("keydown",e=>{
- if(!review)return;
- const pages=["identity","overview",...DOMAIN_NAMES.map((_,i)=>"domain"+i)],i=pages.indexOf(page);
- if(e.key==="ArrowLeft")navigate(pages[Math.min(i+1,pages.length-1)]);
- if(e.key==="ArrowRight")navigate(pages[Math.max(i-1,0)]);
- if(e.key==="Escape"){review=false;document.body.classList.remove("review-mode")}
+
+document.addEventListener('keydown',e=>{
+ if(!present)return;
+
+ const pages=[
+  'identity',
+  'overview',
+  ...NAMES.map((_,i)=>'domain'+i)
+ ];
+
+ const i=pages.indexOf(page);
+
+ if(e.key==='ArrowLeft'){
+  navigate(pages[Math.min(i+1,pages.length-1)]);
+ }
+
+ if(e.key==='ArrowRight'){
+  navigate(pages[Math.max(i-1,0)]);
+ }
+
+ if(e.key==='Escape'){
+  present=false;
+  document.body.classList.remove('presentation');
+ }
 });
-try{const saved=localStorage.getItem(CACHE_KEY);if(saved){const data=JSON.parse(saved);if(valid(data)){db=data;render();setStatus("تُعرض البيانات المحفوظة لحين التحديث")}}}catch(e){}
+
+try{
+ const c=JSON.parse(localStorage.getItem(CACHE));
+
+ if(valid(c)){
+  db=c;
+  render();
+  status('بيانات محفوظة محليًا · جارٍ التحديث');
+ }
+}catch(e){}
+
 loadData();
 </script>
 </body>
