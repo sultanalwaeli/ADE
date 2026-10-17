@@ -4,229 +4,579 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>بداية رحلة التميز| أبو الدرداء</title>
+<title>بداية رحلة التميز | أبو الدرداء — من جيد إلى عظيم</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
 :root {
- --bg:#06192b;
- --surface:#0c2b45;
- --line:#ffffff24;
- --text:#f5fbff;
- --sub:#bad0dd;
- --aqua:#66e0de;
- --gold:#f1cd83;
- --green:#92e3ba;
+  --bg:#06192b;
+  --surface:#0c2b45;
+  --line:#ffffff24;
+  --text:#f5fbff;
+  --sub:#bad0dd;
+  --aqua:#66e0de;
+  --gold:#f1cd83;
+  --green:#92e3ba;
 }
-*{box-sizing:border-box}
-body{
- margin:0;
- font-family:Cairo,Tahoma,sans-serif;
- color:var(--text);
- background:radial-gradient(circle at 85% -10%,#14608055,transparent 35%),var(--bg);
+
+* {
+  box-sizing:border-box;
 }
-button,input{font:inherit}
-button{cursor:pointer}
-a{color:inherit;text-decoration:none}
-header{
- position:sticky;top:0;z-index:10;
- background:#06192bf2;
- backdrop-filter:blur(16px);
- border-bottom:1px solid var(--line);
+
+html {
+  scroll-behavior:smooth;
 }
-.top{
- max-width:1500px;margin:auto;padding:12px 3%;
- display:flex;align-items:center;justify-content:space-between;
- gap:12px;flex-wrap:wrap;
+
+body {
+  margin:0;
+  font-family:Cairo,Tahoma,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 85% -10%,#14608055,transparent 35%),
+    var(--bg);
 }
-.brand{display:flex;gap:13px;align-items:center}
-.emblem{
- height:58px;width:58px;border-radius:15px;
- background:#fff;padding:3px;
- display:grid;place-items:center;
- border:1px solid #ffffff44;
- overflow:hidden;
+
+button,input {
+  font:inherit;
 }
-.emblem img{width:100%;height:100%;object-fit:contain;border-radius:10px}
-.brand b{font-size:20px}
-.brand small{display:block;color:var(--sub)}
-.actions{display:flex;gap:8px;flex-wrap:wrap}
-.btn{
- background:#ffffff12;border:1px solid #ffffff35;
- color:white;border-radius:12px;padding:9px 15px;font-weight:800;
+
+button {
+  cursor:pointer;
 }
-.btn:hover,.tab:hover{background:#ffffff24}
-.btn.primary{
- background:linear-gradient(130deg,#167a94,#175a81);
- border-color:#6ddde35c;
+
+a {
+  color:inherit;
+  text-decoration:none;
 }
-.btn.gold{background:#efc775;color:#092339;border:0}
-.tabs{
- max-width:1500px;margin:auto;display:flex;gap:8px;
- overflow-x:auto;padding:0 3% 13px;scrollbar-width:thin;
+
+header {
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#06192bf2;
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
 }
-.tab{
- border:1px solid var(--line);background:#ffffff08;
- color:var(--sub);border-radius:12px;padding:9px 15px;
- white-space:nowrap;font-weight:800;
+
+.top {
+  max-width:1500px;
+  margin:auto;
+  padding:12px 3%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
 }
-.tab.active{background:#136783;color:white;border-color:#73d9e2}
-main{max-width:1500px;margin:auto;padding:28px 3% 80px}
-.hero{
- padding:40px;border:1px solid #ffffff2b;border-radius:26px;
- background:radial-gradient(circle at 10% 20%,#19a5aa40,transparent 38%),
- linear-gradient(125deg,#164767,#09243c);
- margin-bottom:20px;
+
+.brand {
+  display:flex;
+  gap:14px;
+  align-items:center;
 }
-.eyebrow{
- color:var(--gold);font-weight:900;
- font-size:13px;letter-spacing:1px;
+
+.emblem {
+  height:64px;
+  width:64px;
+  border-radius:15px;
+  background:white;
+  padding:4px;
+  display:grid;
+  place-items:center;
+  border:1px solid #ffffff44;
+  overflow:hidden;
+  flex-shrink:0;
 }
-h1{font-size:clamp(27px,4vw,48px);margin:7px 0 10px;line-height:1.5}
-h2{font-size:22px;margin:0 0 15px}
-h3{font-size:17px;margin:0 0 10px}
-p{line-height:2;color:var(--sub);margin:7px 0}
-.hero p{font-size:17px;max-width:980px}
-.grid{
- display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
- gap:13px;margin:17px 0;
+
+.emblem img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  border-radius:10px;
 }
-.card{
- background:linear-gradient(145deg,var(--surface),#092238);
- border:1px solid var(--line);border-radius:20px;
- padding:23px;margin-bottom:17px;min-width:0;
+
+.brand-title {
+  display:block;
+  font-size:21px;
+  font-weight:900;
+  line-height:1.6;
 }
-.metric{text-align:center}
-.metric b{
- display:block;color:var(--aqua);
- font-size:35px;line-height:1.5;
+
+.brand-slogan {
+  display:block;
+  color:var(--gold);
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:.3px;
+  margin-top:2px;
 }
-.metric span{color:var(--sub);font-size:13px}
-.details{
- display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
- gap:12px;
+
+.brand-description {
+  display:block;
+  color:var(--sub);
+  font-size:11px;
+  margin-top:3px;
 }
-.field{
- border:1px solid #ffffff1f;background:#ffffff09;
- border-radius:14px;padding:14px;min-width:0;
+
+.actions {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
 }
-.field small{display:block;color:var(--sub);margin-bottom:5px}
-.field strong{
- font-size:15px;line-height:1.9;
- overflow-wrap:anywhere;white-space:pre-wrap;
+
+.btn {
+  background:#ffffff12;
+  border:1px solid #ffffff35;
+  color:white;
+  border-radius:12px;
+  padding:9px 15px;
+  font-weight:800;
+  transition:.2s;
 }
-.school-intro{
- white-space:pre-wrap;
- line-height:2.25;
- color:#f4faff;
- font-size:16px;
- padding:7px 4px;
- overflow-wrap:anywhere;
- max-width:1150px;
+
+.btn:hover,
+.tab:hover {
+  background:#ffffff24;
+  transform:translateY(-1px);
 }
-.domain-grid{
- display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
- gap:14px;
+
+.btn.primary {
+  background:linear-gradient(130deg,#167a94,#175a81);
+  border-color:#6ddde35c;
 }
-.domain{
- border:1px solid var(--line);
- background:linear-gradient(130deg,#123b56,#0b263e);
- border-radius:20px;padding:23px;
+
+.btn.gold {
+  background:#efc775;
+  color:#092339;
+  border:0;
 }
-.domain h3{font-size:21px;color:white}
-.pills{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}
-.pill{
- padding:5px 12px;border-radius:99px;
- background:#ffffff12;font-size:12px;
+
+.tabs {
+  max-width:1500px;
+  margin:auto;
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding:0 3% 13px;
+  scrollbar-width:thin;
 }
-.pill.good{color:var(--green)}
-.pill.warn{color:var(--gold)}
-.standard{
- margin:0 0 18px;border:1px solid #ffffff2a;
- border-radius:19px;overflow:hidden;background:#0d2a43;
+
+.tab {
+  border:1px solid var(--line);
+  background:#ffffff08;
+  color:var(--sub);
+  border-radius:12px;
+  padding:9px 15px;
+  white-space:nowrap;
+  font-weight:800;
 }
-.standard-head{
- padding:19px 21px;
- background:linear-gradient(100deg,#17465f,#11324b);
- display:flex;align-items:center;justify-content:space-between;
- gap:10px;flex-wrap:wrap;
+
+.tab.active {
+  background:#136783;
+  color:white;
+  border-color:#73d9e2;
 }
-.standard-head h2{margin:0;color:var(--gold)}
-.standard-body{
- padding:18px;display:grid;
- grid-template-columns:1fr 1fr;gap:17px;
+
+main {
+  max-width:1500px;
+  margin:auto;
+  padding:28px 3% 80px;
+  min-height:65vh;
 }
-.subhead{font-size:18px;font-weight:900;margin-bottom:12px}
-.subhead.good{color:var(--green)}
-.subhead.warn{color:var(--gold)}
-.entry{
- background:#ffffff08;border:1px solid #ffffff22;
- border-radius:14px;padding:16px;margin-bottom:11px;
+
+.hero {
+  padding:40px;
+  border:1px solid #ffffff2b;
+  border-radius:26px;
+  background:
+    radial-gradient(circle at 10% 20%,#19a5aa40,transparent 38%),
+    linear-gradient(125deg,#164767,#09243c);
+  margin-bottom:20px;
 }
-.entry .label{
- font-size:12px;color:var(--aqua);font-weight:900;
+
+.eyebrow {
+  color:var(--gold);
+  font-weight:900;
+  font-size:13px;
+  letter-spacing:1px;
 }
-.entry .body{
- white-space:pre-wrap;overflow-wrap:anywhere;
- line-height:1.95;margin:8px 0;color:white;
+
+h1 {
+  font-size:clamp(27px,4vw,48px);
+  margin:7px 0 10px;
+  line-height:1.5;
 }
-.evidence{
- border-right:3px solid var(--aqua);
- padding:10px 13px;background:#ffffff0a;
- border-radius:8px;font-size:13px;color:#d1e2eb;
- white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.9;
+
+h2 {
+  font-size:22px;
+  margin:0 0 15px;
 }
-.empty{
- padding:20px;border:1px dashed #ffffff40;
- border-radius:12px;color:var(--sub);text-align:center;
+
+h3 {
+  font-size:17px;
+  margin:0 0 10px;
 }
-.compass{
- display:flex;justify-content:space-between;
- gap:20px;align-items:center;flex-wrap:wrap;
- background:linear-gradient(110deg,#164b5f,#0b2b47);
- border-color:#edca8155;
+
+p {
+  line-height:2;
+  color:var(--sub);
+  margin:7px 0;
 }
-.compass h2{color:var(--gold)}
-.notice{font-size:12px;color:var(--sub);padding:12px 0}
-.footer{
- text-align:center;color:var(--sub);
- font-size:12px;padding:0 12px 25px;
+
+.hero p {
+  font-size:17px;
+  max-width:980px;
 }
-.loading{text-align:center;padding:80px 10px}
-.presentation main{max-width:1750px}
-.presentation .hero{padding:52px}
-.presentation .entry{font-size:18px}
-.presentation .standard-head h2{font-size:27px}
-.presentation .standard-body{gap:24px}
-.presentation .card{padding:28px}
-.navline{
- display:flex;gap:10px;
- justify-content:space-between;flex-wrap:wrap;
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:13px;
+  margin:17px 0;
 }
-.search{
- background:#ffffff0e;border:1px solid #ffffff3b;
- color:white;border-radius:12px;padding:10px 15px;
- min-width:250px;max-width:100%;outline:none;
+
+.card {
+  background:linear-gradient(145deg,var(--surface),#092238);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:23px;
+  margin-bottom:17px;
+  min-width:0;
 }
-.search::placeholder{color:#b7cedb}
-@media(max-width:900px){
- .grid{grid-template-columns:repeat(2,1fr)}
- .details{grid-template-columns:repeat(2,1fr)}
- .domain-grid,.standard-body{grid-template-columns:1fr}
+
+.metric {
+  text-align:center;
 }
-@media(max-width:550px){
- .grid,.details{grid-template-columns:1fr}
- .hero{padding:23px}
- .card{padding:17px}
- .brand b{font-size:16px}
+
+.metric b {
+  display:block;
+  color:var(--aqua);
+  font-size:35px;
+  line-height:1.5;
 }
-@media print{
- header,.navline,.actions{display:none!important}
- body{background:white;color:black}
- .hero,.card,.domain,.standard,.entry,.field{
-  background:white;color:black;border:1px solid #bbb;
- }
- .entry .body,h1,h2,h3{color:black}
- p,.field small{color:#333}
+
+.metric span {
+  color:var(--sub);
+  font-size:13px;
+}
+
+.details {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+
+.field {
+  border:1px solid #ffffff1f;
+  background:#ffffff09;
+  border-radius:14px;
+  padding:14px;
+  min-width:0;
+}
+
+.field small {
+  display:block;
+  color:var(--sub);
+  margin-bottom:5px;
+}
+
+.field strong {
+  font-size:15px;
+  line-height:1.9;
+  overflow-wrap:anywhere;
+  white-space:pre-wrap;
+}
+
+.school-intro {
+  white-space:pre-wrap;
+  line-height:2.25;
+  color:#f4faff;
+  font-size:16px;
+  padding:7px 4px;
+  overflow-wrap:anywhere;
+  max-width:1150px;
+}
+
+.domain-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+
+.domain {
+  border:1px solid var(--line);
+  background:linear-gradient(130deg,#123b56,#0b263e);
+  border-radius:20px;
+  padding:23px;
+}
+
+.domain h3 {
+  font-size:21px;
+  color:white;
+}
+
+.pills {
+  display:flex;
+  gap:9px;
+  flex-wrap:wrap;
+  margin:14px 0;
+}
+
+.pill {
+  padding:5px 12px;
+  border-radius:99px;
+  background:#ffffff12;
+  font-size:12px;
+}
+
+.pill.good {
+  color:var(--green);
+}
+
+.pill.warn {
+  color:var(--gold);
+}
+
+.standard {
+  margin:0 0 18px;
+  border:1px solid #ffffff2a;
+  border-radius:19px;
+  overflow:hidden;
+  background:#0d2a43;
+}
+
+.standard-head {
+  padding:19px 21px;
+  background:linear-gradient(100deg,#17465f,#11324b);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.standard-head h2 {
+  margin:0;
+  color:var(--gold);
+}
+
+.standard-body {
+  padding:18px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+}
+
+.subhead {
+  font-size:18px;
+  font-weight:900;
+  margin-bottom:12px;
+}
+
+.subhead.good {
+  color:var(--green);
+}
+
+.subhead.warn {
+  color:var(--gold);
+}
+
+.entry {
+  background:#ffffff08;
+  border:1px solid #ffffff22;
+  border-radius:14px;
+  padding:16px;
+  margin-bottom:11px;
+}
+
+.entry .label {
+  font-size:12px;
+  color:var(--aqua);
+  font-weight:900;
+}
+
+.entry .body {
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  line-height:1.95;
+  margin:8px 0;
+  color:white;
+}
+
+.evidence {
+  border-right:3px solid var(--aqua);
+  padding:10px 13px;
+  background:#ffffff0a;
+  border-radius:8px;
+  font-size:13px;
+  color:#d1e2eb;
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  line-height:1.9;
+}
+
+.empty {
+  padding:20px;
+  border:1px dashed #ffffff40;
+  border-radius:12px;
+  color:var(--sub);
+  text-align:center;
+}
+
+.compass {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+  flex-wrap:wrap;
+  background:linear-gradient(110deg,#164b5f,#0b2b47);
+  border-color:#edca8155;
+}
+
+.compass h2 {
+  color:var(--gold);
+}
+
+.notice {
+  font-size:12px;
+  color:var(--sub);
+  padding:12px 0;
+}
+
+.footer {
+  text-align:center;
+  color:var(--sub);
+  font-size:12px;
+  padding:0 12px 25px;
+}
+
+.loading {
+  text-align:center;
+  padding:80px 10px;
+}
+
+.presentation main {
+  max-width:1750px;
+}
+
+.presentation .hero {
+  padding:52px;
+}
+
+.presentation .entry {
+  font-size:18px;
+}
+
+.presentation .standard-head h2 {
+  font-size:27px;
+}
+
+.presentation .standard-body {
+  gap:24px;
+}
+
+.presentation .card {
+  padding:28px;
+}
+
+.navline {
+  display:flex;
+  gap:10px;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.search {
+  background:#ffffff0e;
+  border:1px solid #ffffff3b;
+  color:white;
+  border-radius:12px;
+  padding:10px 15px;
+  min-width:250px;
+  max-width:100%;
+  outline:none;
+}
+
+.search::placeholder {
+  color:#b7cedb;
+}
+
+@media(max-width:900px) {
+  .grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .details {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .domain-grid,
+  .standard-body {
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:550px) {
+  .grid,
+  .details {
+    grid-template-columns:1fr;
+  }
+
+  .hero {
+    padding:23px;
+  }
+
+  .card {
+    padding:17px;
+  }
+
+  .brand-title {
+    font-size:16px;
+  }
+
+  .brand-slogan {
+    font-size:13px;
+  }
+
+  .emblem {
+    width:53px;
+    height:53px;
+  }
+}
+
+@media print {
+  header,
+  .navline,
+  .actions {
+    display:none!important;
+  }
+
+  body {
+    background:white;
+    color:black;
+  }
+
+  .hero,
+  .card,
+  .domain,
+  .standard,
+  .entry,
+  .field {
+    background:white;
+    color:black;
+    border:1px solid #bbb;
+  }
+
+  .entry .body,
+  h1,h2,h3 {
+    color:black;
+  }
+
+  p,
+  .field small {
+    color:#333;
+  }
 }
 </style>
 </head>
@@ -234,44 +584,67 @@ p{line-height:2;color:var(--sub);margin:7px 0}
 <body>
 
 <header>
- <div class="top">
-  <div class="brand">
-   <div class="emblem">
-    <img
-     src="https://c.top4top.io/p_3906f6odb1.jpg"
-     alt="شعار مدرسة أبو الدرداء"
-     loading="eager"
-     referrerpolicy="no-referrer"
-     onerror="this.style.display='none';this.parentElement.textContent='✦'"
-    >
-   </div>
-   <div>
-    <b>نبض الإجادة | أبو الدرداء</b>
-    <small>التقويم الذاتي والتميز المؤسسي · 2026/2027م</small>
-   </div>
+  <div class="top">
+
+    <div class="brand">
+      <div class="emblem">
+        <img
+          src="https://c.top4top.io/p_3906f6odb1.jpg"
+          alt="شعار مدرسة أبو الدرداء"
+          loading="eager"
+          referrerpolicy="no-referrer"
+          onerror="this.style.display='none';this.parentElement.textContent='✦'"
+        >
+      </div>
+
+      <div>
+        <b class="brand-title">
+          بداية رحلة التميز | أبو الدرداء
+        </b>
+
+        <span class="brand-slogan">
+          من جيد إلى عظيم
+        </span>
+
+        <small class="brand-description">
+          منصة التقويم الذاتي والتميز المؤسسي · 2026/2027م
+        </small>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn" onclick="loadData()">
+        ↻ تحديث البيانات
+      </button>
+
+      <button class="btn primary" onclick="togglePresentation()">
+        ◉ وضع العرض
+      </button>
+
+      <a
+        class="btn gold"
+        href="https://sultanalwaeli.github.io/compass/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ✧ البوصلة الاستراتيجية ↗
+      </a>
+    </div>
+
   </div>
 
-  <div class="actions">
-   <button class="btn" onclick="loadData()">↻ تحديث البيانات</button>
-   <button class="btn primary" onclick="togglePresentation()">◉ وضع العرض</button>
-   <a
-    class="btn gold"
-    href="https://sultanalwaeli.github.io/compass/"
-    target="_blank"
-    rel="noopener noreferrer"
-   >✧ البوصلة الاستراتيجية ↗</a>
-  </div>
- </div>
- <nav class="tabs" id="tabs"></nav>
+  <nav class="tabs" id="tabs"></nav>
 </header>
 
 <main id="app">
- <div class="loading">جارٍ تحميل قاعدة بيانات أبو الدرداء…</div>
+  <div class="loading">
+    جارٍ تحميل قاعدة بيانات أبو الدرداء…
+  </div>
 </main>
 
 <footer class="footer">
- مدرسة أبو الدرداء للبنين (5–12) · الرمز المدرسي 7237
- <div id="status"></div>
+  مدرسة أبو الدرداء للبنين (5–12) · الرمز المدرسي 7237
+  <div id="status"></div>
 </footer>
 
 <script>
@@ -280,14 +653,14 @@ p{line-height:2;color:var(--sub);margin:7px 0}
 const API =
 'https://script.google.com/macros/s/AKfycbwPtbrsr5nRkxh1k-AKQWVgLlSYlUuhPvTo0lGqBkwl97HS9c05F2w_sC-tzUcAvtPN9Q/exec';
 
-const CACHE='ad-excellence-sheet-v3';
+const CACHE='ad-excellence-sheet-v4';
 
 const NAMES=[
- 'الإنجاز الدراسي',
- 'النمو الشخصي',
- 'التدريس والتقويم',
- 'مناخ المدرسة وبيئة التعلم',
- 'القيادة والإدارة والحوكمة'
+  'الإنجاز الدراسي',
+  'النمو الشخصي',
+  'التدريس والتقويم',
+  'مناخ المدرسة وبيئة التعلم',
+  'القيادة والإدارة والحوكمة'
 ];
 
 let db=null;
@@ -303,597 +676,761 @@ const trim=x=>String(x??'').trim();
 const norm=x=>trim(x).replace(/\s+/g,' ');
 
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({
- '&':'&amp;',
- '<':'&lt;',
- '>':'&gt;',
- '"':'&quot;',
- "'":'&#39;'
+  '&':'&amp;',
+  '<':'&lt;',
+  '>':'&gt;',
+  '"':'&quot;',
+  "'":'&#39;'
 }[c]));
 
-function field(row,key){
- const wanted=norm(key);
- for(const [k,v] of Object.entries(row||{})){
-  if(norm(k)===wanted)return trim(v);
- }
- return '';
-}
+function field(row,key) {
+  const wanted=norm(key);
 
-function sheet(name){
- return db?.sheets?.[name]?.rows||[];
-}
-
-function value(key){
- for(const r of sheet('هوية المدرسة')){
-  const v=field(r,key);
-  if(v)return v;
- }
- return field(db?.school,key);
-}
-
-function info(k,v){
- return v
- ?`<div class="field">
-    <small>${esc(k)}</small>
-    <strong>${esc(v)}</strong>
-   </div>`
- :'';
-}
-
-function card(title,body){
- return `<section class="card">
-  <h2>${esc(title)}</h2>${body}
- </section>`;
-}
-
-function metric(n,l){
- return `<div class="card metric">
-  <b>${esc(n)}</b>
-  <span>${esc(l)}</span>
- </div>`;
-}
-
-function hero(k,t,d){
- return `<section class="hero">
-  <div class="eyebrow">${esc(k)}</div>
-  <h1>${esc(t)}</h1>
-  <p>${esc(d)}</p>
- </section>`;
-}
-
-function compass(){
- return `<section class="card compass">
-  <div>
-   <div class="eyebrow">STRATEGIC COMPASS</div>
-   <h2>بوصلة أبو الدرداء الاستراتيجية</h2>
-   <p>للاطلاع على الأهداف الاستراتيجية وأهداف العام الدراسي،
-   انتقل إلى المنصة المتخصصة.</p>
-  </div>
-  <a class="btn gold"
-   href="https://sultanalwaeli.github.io/compass/"
-   target="_blank"
-   rel="noopener noreferrer">
-   استكشاف البوصلة ↗
-  </a>
- </section>`;
-}
-
-function identity(){
- let s=hero(
-  '01 · SCHOOL PROFILE',
-  'البيانات الأساسية للمدرسة',
-  'أبو الدرداء: الهوية والمكونات والمكنونات والرؤية والرسالة والمجتمع المدرسي.'
- );
-
- const total=value('إجمالي الطلبة')||value('عدد الطلبة')||'—';
-
- s+=`<div class="grid">
-  ${metric(value('الرمز المدرسي')||'7237','الرمز المدرسي')}
-  ${metric(total,'إجمالي الطلبة')}
-  ${metric(value('عدد الشعب')||'23','عدد الشعب')}
-  ${metric('5','مجالات التقويم')}
- </div>`;
-
- const groups=[
-  [
-   '01 · الهوية والموقع',
-   [
-    'اسم المدرسة','الرمز المدرسي','السنة الدراسية',
-    'المديرية','المحافظة','الولاية','القرية',
-    'المرحلة أو الصف','نوع المدرسة',
-    'سنة تشغيل المبنى','سنة إنشاء المدرسة',
-    'بداية الدوام','نهاية الدوام'
-   ]
-  ],
-  [
-   '02 · المجتمع الطلابي',
-   [
-    'عدد الطلبة (5-8)','عدد الطلبة (9-12)',
-    'إجمالي الطلبة','عدد الشعب (5-8)',
-    'عدد الشعب (9-12)','عدد الشعب',
-    'عدد الطلبة','عدد الطلاب',
-    'الطلبة العمانيون','الطلبة غير العمانيين'
-   ]
-  ],
-  [
-   '03 · القيادة والموارد البشرية',
-   [
-    'مدير المدرسة','المدير المساعد',
-    'مشرف الإدارة المدرسية','المعلمون',
-    'المعلمون الأوائل','الاختصاصيون',
-    'الفنيون','الهيئة التعليمية',
-    'الهيئة الإدارية','عدد المعلمين',
-    'عدد الإداريين','عدد الفنيين'
-   ]
-  ]
- ];
-
- const used=new Set();
-
- for(const [title,keys] of groups){
-  const entries=keys.map(k=>{
-   used.add(norm(k));
-   return info(k,value(k));
-  }).filter(Boolean);
-
-  if(entries.length){
-   s+=card(
-    title,
-    `<div class="details">${entries.join('')}</div>`
-   );
+  for(const [k,v] of Object.entries(row||{})) {
+    if(norm(k)===wanted) return trim(v);
   }
- }
 
- const intro=value('نبذة عامة عن المدرسة');
- const vision=value('رؤية المدرسة');
- const mission=value('رسالة المدرسة');
+  return '';
+}
 
- [
-  'نبذة عامة عن المدرسة',
-  'رؤية المدرسة',
-  'رسالة المدرسة'
- ].forEach(k=>used.add(norm(k)));
+function sheet(name) {
+  return db?.sheets?.[name]?.rows||[];
+}
 
- // الرؤية والرسالة في قسم مستقل
- if(vision||mission){
-  s+=card(
-   '04 · رؤيتنا ورسالتنا',
-   `${vision
-    ?`<h3 style="color:var(--gold)">الرؤية</h3>
-      <p style="color:white">${esc(vision)}</p>`
-    :''
-   }
-   ${mission
-    ?`<h3 style="color:var(--gold);margin-top:18px">الرسالة</h3>
-      <p style="color:white">${esc(mission)}</p>`
-    :''
-   }`
-  );
- }
-
- // نبذة المدرسة تظهر أسفل الرؤية والرسالة بعرض الصفحة
- if(intro){
-  s+=card(
-   '05 · نبذة عن المدرسة',
-   `<div class="school-intro">${esc(intro)}</div>`
-  );
- }
-
- // بقية بيانات المدرسة في بطاقات متناسقة
- const extras=[];
-
- for(const r of sheet('هوية المدرسة')){
-  for(const [k,v] of Object.entries(r)){
-   if(
-    !used.has(norm(k)) &&
-    trim(v) &&
-    !norm(k).includes('الأهداف الاستراتيجية') &&
-    !norm(k).includes('أهداف العام الدراسي')
-   ){
-    extras.push(info(k,v));
-    used.add(norm(k));
-   }
+function value(key) {
+  for(const r of sheet('هوية المدرسة')) {
+    const v=field(r,key);
+    if(v) return v;
   }
- }
 
- if(extras.length){
-  s+=card(
-   '06 · مرافق المدرسة ومكوناتها ومكنوناتها',
-   `<div class="details">${extras.join('')}</div>`
-  );
- }
-
- s+=compass();
-
- s+=`<section class="card" style="text-align:center">
-  <h2>المرحلة التالية: التحليل الذاتي للمدرسة</h2>
-  <p>خمسة مجالات، ومعايير واضحة، وأدلة موثقة
-  لجوانب الإجادة والتحسين.</p>
-  <button class="btn primary" onclick="navigate('overview')">
-   الانتقال إلى التحليل الذاتي ←
-  </button>
- </section>`;
-
- return s;
+  return field(db?.school,key);
 }
 
-function rowsOf(name){
- return sheet(name).map(r=>({
-  criterion:field(r,'المعيار')||'معيار غير محدد',
-  strength:field(r,'جوانب الإجادة'),
-  strengthEvidence:field(r,'أدلة الإجادة'),
-  improvement:field(r,'جوانب التحسين'),
-  improvementEvidence:field(r,'أدلة التحسين')
- }));
+function info(k,v) {
+  return v
+    ? `<div class="field">
+         <small>${esc(k)}</small>
+         <strong>${esc(v)}</strong>
+       </div>`
+    : '';
 }
 
-function totals(name){
- const rows=rowsOf(name);
- return {
-  criteria:new Set(rows.map(r=>r.criterion)).size,
-  strengths:rows.filter(r=>r.strength).length,
-  improvements:rows.filter(r=>r.improvement).length
- };
-}
-
-function overview(){
- const sum=NAMES.map(totals);
-
- let s=hero(
-  '02 · SCHOOL SELF-EVALUATION',
-  'التحليل الذاتي للمدرسة',
-  'مجالات التقويم الخمسة ومعاييرها، وما يقابل كل معيار من جوانب الإجادة وفرص التحسين والأدلة الداعمة.'
- );
-
- s+=`<div class="grid">
-  ${metric('5','مجالات التقويم')}
-  ${metric(sum.reduce((a,b)=>a+b.criteria,0),'المعايير المدرجة')}
-  ${metric(sum.reduce((a,b)=>a+b.strengths,0),'جوانب الإجادة')}
-  ${metric(sum.reduce((a,b)=>a+b.improvements,0),'جوانب التحسين')}
- </div>`;
-
- s+='<div class="domain-grid">';
-
- NAMES.forEach((name,i)=>{
-  const x=sum[i];
-
-  s+=`<article class="domain">
-   <div class="eyebrow">المجال ${i+1} من 5</div>
-   <h3>${esc(name)}</h3>
-   <div class="pills">
-    <span class="pill">${x.criteria} معايير</span>
-    <span class="pill good">${x.strengths} إجادة</span>
-    <span class="pill warn">${x.improvements} تحسين</span>
-   </div>
-   <button class="btn primary" onclick="navigate('domain${i}')">
-    استعراض المعايير والأدلة ←
-   </button>
-  </article>`;
- });
-
- s+='</div>';
- s+=compass();
-
- return s;
-}
-
-function item(t,e,n,kind){
- return `<article class="entry">
-  <div class="label">
-   ${kind==='good'?'جانب إجادة':'جانب يحتاج إلى تحسين'} · ${n}
-  </div>
-  <div class="body">${esc(t)}</div>
-  ${e
-   ?`<div class="evidence">
-      <b>الدليل والشاهد</b>
-      <div>${esc(e)}</div>
-     </div>`
-   :'<div class="notice">لم يُدرج دليل لهذا البند في الجدول.</div>'
-  }
- </article>`;
-}
-
-function domain(i){
- const name=NAMES[i];
- const rows=rowsOf(name);
- const groups=new Map();
-
- for(const r of rows){
-  const k=norm(r.criterion)||'معيار غير محدد';
-
-  if(!groups.has(k))groups.set(k,[]);
-  groups.get(k).push(r);
- }
-
- let s=hero(
-  `المجال ${i+1} من 5`,
-  name,
-  'عرض التقويم وفق المعيار، مع المحافظة على النصوص والأدلة الواردة في قاعدة البيانات.'
- );
-
- const x=totals(name);
-
- s+=`<div class="grid">
-  ${metric(x.criteria,'المعايير')}
-  ${metric(x.strengths,'جوانب الإجادة')}
-  ${metric(x.improvements,'جوانب التحسين')}
-  ${metric(rows.length,'صفوف البيانات')}
- </div>`;
-
- s+=`<section class="card">
-  <div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap">
-   <h2 style="margin:0">معايير المجال</h2>
-   <input
-    class="search"
-    aria-label="بحث في المجال"
-    placeholder="ابحث عن معيار أو شاهد…"
-    value="${esc(searchTerm)}"
-    oninput="searchTerm=this.value;filterStandards()"
-   >
-  </div>
-  <div class="pills">
-   ${[...groups.keys()].map((k,j)=>
-    `<a class="pill" href="#criterion-${i}-${j}">${esc(k)}</a>`
-   ).join('')}
-  </div>
- </section>`;
-
- let j=0;
-
- for(const [criterion,entries] of groups){
-  const strengths=entries.filter(r=>r.strength);
-  const improvements=entries.filter(r=>r.improvement);
-
-  const searchText=norm([
-   criterion,
-   ...entries.flatMap(r=>[
-    r.strength,
-    r.strengthEvidence,
-    r.improvement,
-    r.improvementEvidence
-   ])
-  ].join(' ')).toLowerCase();
-
-  s+=`<section
-   class="standard"
-   id="criterion-${i}-${j++}"
-   data-search="${esc(searchText)}"
-  >
-   <div class="standard-head">
-    <div>
-     <div class="eyebrow">المعيار</div>
-     <h2>${esc(criterion)}</h2>
-    </div>
-    <div class="pills">
-     <span class="pill good">${strengths.length} إجادة</span>
-     <span class="pill warn">${improvements.length} تحسين</span>
-    </div>
-   </div>
-
-   <div class="standard-body">
-    <div>
-     <div class="subhead good">✦ جوانب الإجادة وأدلتها</div>
-     ${strengths.length
-      ?strengths.map((r,k)=>
-       item(r.strength,r.strengthEvidence,k+1,'good')
-      ).join('')
-      :'<div class="empty">لم تُسجل جوانب إجادة لهذا المعيار.</div>'
-     }
-    </div>
-
-    <div>
-     <div class="subhead warn">◈ جوانب التحسين وأدلتها</div>
-     ${improvements.length
-      ?improvements.map((r,k)=>
-       item(r.improvement,r.improvementEvidence,k+1,'warn')
-      ).join('')
-      :'<div class="empty">لم تُسجل جوانب تحسين لهذا المعيار.</div>'
-     }
-    </div>
-   </div>
+function card(title,body) {
+  return `<section class="card">
+    <h2>${esc(title)}</h2>
+    ${body}
   </section>`;
- }
-
- if(!groups.size){
-  s+='<div class="empty">لم تتوفر بيانات لهذا المجال في الاستجابة الحالية.</div>';
- }
-
- s+=`<div class="navline">
-  <button class="btn"
-   onclick="navigate('${i===0?'overview':'domain'+(i-1)}')">
-   → السابق
-  </button>
-  <button class="btn primary"
-   onclick="navigate('${i===4?'identity':'domain'+(i+1)}')">
-   ${i===4?'العودة للبيانات الأساسية':'المجال التالي ←'}
-  </button>
- </div>`;
-
- return s;
 }
 
-function filterStandards(){
- const q=norm(searchTerm).toLowerCase();
-
- document.querySelectorAll('.standard').forEach(e=>{
-  e.style.display=e.dataset.search.includes(q)?'':'none';
- });
+function metric(n,l) {
+  return `<div class="card metric">
+    <b>${esc(n)}</b>
+    <span>${esc(l)}</span>
+  </div>`;
 }
 
-function render(){
- const pages=[
-  ['identity','البيانات الأساسية'],
-  ['overview','التحليل الذاتي'],
-  ...NAMES.map((n,i)=>['domain'+i,n])
- ];
-
- el('tabs').innerHTML=pages.map(([id,t])=>
-  `<button
-   class="tab ${page===id?'active':''}"
-   onclick="navigate('${id}')">
-   ${esc(t)}
-  </button>`
- ).join('');
-
- if(!db){
-  el('app').innerHTML='<div class="loading">جارٍ تحميل البيانات…</div>';
-  return;
- }
-
- el('app').innerHTML=
-  page==='identity'
-  ?identity()
-  :page==='overview'
-   ?overview()
-   :domain(Math.max(
-     0,
-     Math.min(4,Number(page.replace('domain',''))||0)
-    ));
-
- if(page.startsWith('domain'))filterStandards();
+function hero(k,t,d) {
+  return `<section class="hero">
+    <div class="eyebrow">${esc(k)}</div>
+    <h1>${esc(t)}</h1>
+    <p>${esc(d)}</p>
+  </section>`;
 }
 
-function navigate(p){
- page=p;
- searchTerm='';
- render();
- window.scrollTo({top:0,behavior:'smooth'});
+function compass() {
+  return `<section class="card compass">
+    <div>
+      <div class="eyebrow">STRATEGIC COMPASS</div>
+      <h2>بوصلة أبو الدرداء الاستراتيجية</h2>
+      <p>
+        للاطلاع على الأهداف الاستراتيجية وأهداف العام الدراسي،
+        انتقل إلى المنصة المتخصصة.
+      </p>
+    </div>
+
+    <a class="btn gold"
+      href="https://sultanalwaeli.github.io/compass/"
+      target="_blank"
+      rel="noopener noreferrer">
+      استكشاف البوصلة ↗
+    </a>
+  </section>`;
 }
 
-function status(t){
- el('status').textContent=t;
-}
-
-function valid(d){
- return d&&
- d.success===true&&
- d.sheets&&
- typeof d.sheets==='object';
-}
-
-function loadData(){
- const n=++serial;
- const cb='adExcellence_'+n;
- const script=document.createElement('script');
-
- let done=false;
-
- status('جارٍ تحديث البيانات من Google Sheets…');
-
- const timer=setTimeout(
-  ()=>fail('انتهت مهلة الاتصال'),
-  20000
- );
-
- function clear(){
-  clearTimeout(timer);
-  delete window[cb];
-  script.remove();
- }
-
- function fail(msg){
-  if(done)return;
-
-  done=true;
-  clear();
-
-  status(
-   'تعذر التحديث: '+msg+
-   (db?' · تُعرض آخر نسخة ناجحة':'')
+function identity() {
+  let s=hero(
+    '01 · SCHOOL PROFILE',
+    'البيانات الأساسية للمدرسة',
+    'أبو الدرداء: الهوية والمكونات والمكنونات والرؤية والرسالة والمجتمع المدرسي.'
   );
 
-  if(!db){
-   el('app').innerHTML=`<section class="card">
-    <h2>تعذر الاتصال</h2>
-    <p>تحقق من رابط خدمة Google Apps Script وصلاحية النشر.</p>
-    <button class="btn primary" onclick="loadData()">
-     إعادة المحاولة
+  const total=value('إجمالي الطلبة')||
+              value('عدد الطلبة')||
+              '—';
+
+  s+=`<div class="grid">
+    ${metric(value('الرمز المدرسي')||'7237','الرمز المدرسي')}
+    ${metric(total,'إجمالي الطلبة')}
+    ${metric(value('عدد الشعب')||'—','عدد الشعب')}
+    ${metric('5','مجالات التقويم')}
+  </div>`;
+
+  const groups=[
+    [
+      '01 · الهوية والموقع',
+      [
+        'اسم المدرسة',
+        'الرمز المدرسي',
+        'السنة الدراسية',
+        'المديرية',
+        'المحافظة',
+        'الولاية',
+        'القرية',
+        'المرحلة أو الصف',
+        'نوع المدرسة',
+        'سنة تشغيل المبنى',
+        'سنة إنشاء المدرسة',
+        'بداية الدوام',
+        'نهاية الدوام'
+      ]
+    ],
+    [
+      '02 · المجتمع الطلابي',
+      [
+        'عدد الطلبة (5-8)',
+        'عدد الطلبة (9-12)',
+        'إجمالي الطلبة',
+        'عدد الشعب (5-8)',
+        'عدد الشعب (9-12)',
+        'عدد الشعب',
+        'عدد الطلبة',
+        'عدد الطلاب',
+        'الطلبة العمانيون',
+        'الطلبة غير العمانيين'
+      ]
+    ],
+    [
+      '03 · القيادة والموارد البشرية',
+      [
+        'مدير المدرسة',
+        'المدير المساعد',
+        'مشرف الإدارة المدرسية',
+        'المعلمون',
+        'المعلمون الأوائل',
+        'الاختصاصيون',
+        'الفنيون',
+        'الهيئة التعليمية',
+        'الهيئة الإدارية',
+        'عدد المعلمين',
+        'عدد الإداريين',
+        'عدد الفنيين'
+      ]
+    ]
+  ];
+
+  const used=new Set();
+
+  for(const [title,keys] of groups) {
+    const entries=keys.map(k=>{
+      used.add(norm(k));
+      return info(k,value(k));
+    }).filter(Boolean);
+
+    if(entries.length) {
+      s+=card(
+        title,
+        `<div class="details">${entries.join('')}</div>`
+      );
+    }
+  }
+
+  const intro=value('نبذة عامة عن المدرسة');
+  const vision=value('رؤية المدرسة');
+  const mission=value('رسالة المدرسة');
+
+  [
+    'نبذة عامة عن المدرسة',
+    'رؤية المدرسة',
+    'رسالة المدرسة'
+  ].forEach(k=>used.add(norm(k)));
+
+  // عرض الرؤية والرسالة
+  if(vision||mission) {
+    s+=card(
+      '04 · رؤيتنا ورسالتنا',
+      `${vision
+        ? `<h3 style="color:var(--gold)">الرؤية</h3>
+           <p style="color:white">${esc(vision)}</p>`
+        : ''
+      }
+
+      ${mission
+        ? `<h3 style="color:var(--gold);margin-top:18px">
+             الرسالة
+           </h3>
+           <p style="color:white">${esc(mission)}</p>`
+        : ''
+      }`
+    );
+  }
+
+  // نبذة المدرسة في قسم مستقل
+  if(intro) {
+    s+=card(
+      '05 · نبذة عن المدرسة',
+      `<div class="school-intro">${esc(intro)}</div>`
+    );
+  }
+
+  // بقية بيانات المدرسة
+  const extras=[];
+
+  for(const r of sheet('هوية المدرسة')) {
+    for(const [k,v] of Object.entries(r)) {
+      if(
+        !used.has(norm(k)) &&
+        trim(v) &&
+        !norm(k).includes('الأهداف الاستراتيجية') &&
+        !norm(k).includes('أهداف العام الدراسي')
+      ) {
+        extras.push(info(k,v));
+        used.add(norm(k));
+      }
+    }
+  }
+
+  if(extras.length) {
+    s+=card(
+      '06 · مرافق المدرسة ومكوناتها ومكنوناتها',
+      `<div class="details">${extras.join('')}</div>`
+    );
+  }
+
+  s+=compass();
+
+  s+=`<section class="card" style="text-align:center">
+    <h2>المرحلة التالية: التحليل الذاتي للمدرسة</h2>
+
+    <p>
+      خمسة مجالات، ومعايير واضحة، وأدلة موثقة
+      لجوانب الإجادة والتحسين.
+    </p>
+
+    <button class="btn primary" onclick="navigate('overview')">
+      الانتقال إلى التحليل الذاتي ←
     </button>
-   </section>`;
+  </section>`;
+
+  return s;
+}
+
+function rowsOf(name) {
+  return sheet(name).map(r=>({
+    criterion:field(r,'المعيار')||'معيار غير محدد',
+    strength:field(r,'جوانب الإجادة'),
+    strengthEvidence:field(r,'أدلة الإجادة'),
+    improvement:field(r,'جوانب التحسين'),
+    improvementEvidence:field(r,'أدلة التحسين')
+  })).filter(r=>
+    r.strength||
+    r.strengthEvidence||
+    r.improvement||
+    r.improvementEvidence||
+    r.criterion!=='معيار غير محدد'
+  );
+}
+
+function totals(name) {
+  const rows=rowsOf(name);
+
+  return {
+    criteria:new Set(rows.map(r=>r.criterion)).size,
+    strengths:rows.filter(r=>r.strength).length,
+    improvements:rows.filter(r=>r.improvement).length
+  };
+}
+
+function overview() {
+  const sum=NAMES.map(totals);
+
+  let s=hero(
+    '02 · SCHOOL SELF-EVALUATION',
+    'التحليل الذاتي للمدرسة',
+    'مجالات التقويم الخمسة ومعاييرها، وما يقابل كل معيار من جوانب الإجادة وفرص التحسين والأدلة الداعمة.'
+  );
+
+  s+=`<div class="grid">
+    ${metric('5','مجالات التقويم')}
+    ${metric(
+      sum.reduce((a,b)=>a+b.criteria,0),
+      'المعايير المدرجة'
+    )}
+    ${metric(
+      sum.reduce((a,b)=>a+b.strengths,0),
+      'جوانب الإجادة'
+    )}
+    ${metric(
+      sum.reduce((a,b)=>a+b.improvements,0),
+      'جوانب التحسين'
+    )}
+  </div>`;
+
+  s+='<div class="domain-grid">';
+
+  NAMES.forEach((name,i)=>{
+    const x=sum[i];
+
+    s+=`<article class="domain">
+      <div class="eyebrow">المجال ${i+1} من 5</div>
+
+      <h3>${esc(name)}</h3>
+
+      <div class="pills">
+        <span class="pill">${x.criteria} معايير</span>
+        <span class="pill good">${x.strengths} إجادة</span>
+        <span class="pill warn">${x.improvements} تحسين</span>
+      </div>
+
+      <button class="btn primary"
+        onclick="navigate('domain${i}')">
+        استعراض المعايير والأدلة ←
+      </button>
+    </article>`;
+  });
+
+  s+='</div>';
+  s+=compass();
+
+  return s;
+}
+
+function item(t,e,n,kind) {
+  return `<article class="entry">
+    <div class="label">
+      ${kind==='good'
+        ? 'جانب إجادة'
+        : 'جانب يحتاج إلى تحسين'
+      } · ${n}
+    </div>
+
+    <div class="body">${esc(t)}</div>
+
+    ${e
+      ? `<div class="evidence">
+           <b>الدليل والشاهد</b>
+           <div>${esc(e)}</div>
+         </div>`
+      : `<div class="notice">
+           لم يُدرج دليل لهذا البند في الجدول.
+         </div>`
+    }
+  </article>`;
+}
+
+function domain(i) {
+  const name=NAMES[i];
+  const rows=rowsOf(name);
+  const groups=new Map();
+
+  for(const r of rows) {
+    const k=norm(r.criterion)||'معيار غير محدد';
+
+    if(!groups.has(k)) {
+      groups.set(k,[]);
+    }
+
+    groups.get(k).push(r);
   }
- }
 
- window[cb]=function(d){
-  if(!valid(d)){
-   fail('البيانات غير صالحة');
-   return;
+  let s=hero(
+    `المجال ${i+1} من 5`,
+    name,
+    'عرض التقويم وفق المعيار، مع المحافظة على النصوص والأدلة الواردة في قاعدة البيانات.'
+  );
+
+  const x=totals(name);
+
+  s+=`<div class="grid">
+    ${metric(x.criteria,'المعايير')}
+    ${metric(x.strengths,'جوانب الإجادة')}
+    ${metric(x.improvements,'جوانب التحسين')}
+    ${metric(rows.length,'صفوف البيانات')}
+  </div>`;
+
+  s+=`<section class="card">
+    <div style="
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap
+    ">
+      <h2 style="margin:0">معايير المجال</h2>
+
+      <input
+        class="search"
+        aria-label="بحث في المجال"
+        placeholder="ابحث عن معيار أو شاهد…"
+        value="${esc(searchTerm)}"
+        oninput="searchTerm=this.value;filterStandards()"
+      >
+    </div>
+
+    <div class="pills">
+      ${[...groups.keys()].map((k,j)=>
+        `<a class="pill" href="#criterion-${i}-${j}">
+          ${esc(k)}
+        </a>`
+      ).join('')}
+    </div>
+  </section>`;
+
+  let j=0;
+
+  for(const [criterion,entries] of groups) {
+    const strengths=entries.filter(r=>r.strength);
+    const improvements=entries.filter(r=>r.improvement);
+
+    const searchText=norm([
+      criterion,
+      ...entries.flatMap(r=>[
+        r.strength,
+        r.strengthEvidence,
+        r.improvement,
+        r.improvementEvidence
+      ])
+    ].join(' ')).toLowerCase();
+
+    s+=`<section
+      class="standard"
+      id="criterion-${i}-${j++}"
+      data-search="${esc(searchText)}"
+    >
+      <div class="standard-head">
+        <div>
+          <div class="eyebrow">المعيار</div>
+          <h2>${esc(criterion)}</h2>
+        </div>
+
+        <div class="pills">
+          <span class="pill good">
+            ${strengths.length} إجادة
+          </span>
+
+          <span class="pill warn">
+            ${improvements.length} تحسين
+          </span>
+        </div>
+      </div>
+
+      <div class="standard-body">
+        <div>
+          <div class="subhead good">
+            ✦ جوانب الإجادة وأدلتها
+          </div>
+
+          ${strengths.length
+            ? strengths.map((r,k)=>
+                item(
+                  r.strength,
+                  r.strengthEvidence,
+                  k+1,
+                  'good'
+                )
+              ).join('')
+            : `<div class="empty">
+                 لم تُسجل جوانب إجادة لهذا المعيار.
+               </div>`
+          }
+        </div>
+
+        <div>
+          <div class="subhead warn">
+            ◈ جوانب التحسين وأدلتها
+          </div>
+
+          ${improvements.length
+            ? improvements.map((r,k)=>
+                item(
+                  r.improvement,
+                  r.improvementEvidence,
+                  k+1,
+                  'warn'
+                )
+              ).join('')
+            : `<div class="empty">
+                 لم تُسجل جوانب تحسين لهذا المعيار.
+               </div>`
+          }
+        </div>
+      </div>
+    </section>`;
   }
 
-  if(done)return;
+  if(!groups.size) {
+    s+=`<div class="empty">
+      لم تتوفر بيانات لهذا المجال في الاستجابة الحالية.
+    </div>`;
+  }
 
-  done=true;
-  clear();
+  s+=`<div class="navline">
+    <button class="btn"
+      onclick="navigate('${i===0
+        ? 'overview'
+        : 'domain'+(i-1)
+      }')">
+      → السابق
+    </button>
 
-  db=d;
+    <button class="btn primary"
+      onclick="navigate('${i===4
+        ? 'identity'
+        : 'domain'+(i+1)
+      }')">
+      ${i===4
+        ? 'العودة للبيانات الأساسية'
+        : 'المجال التالي ←'
+      }
+    </button>
+  </div>`;
 
-  try{
-   localStorage.setItem(CACHE,JSON.stringify(d));
-  }catch(e){}
+  return s;
+}
 
+function filterStandards() {
+  const q=norm(searchTerm).toLowerCase();
+
+  document.querySelectorAll('.standard').forEach(e=>{
+    e.style.display=
+      e.dataset.search.includes(q)
+        ? ''
+        : 'none';
+  });
+}
+
+function render() {
+  const pages=[
+    ['identity','البيانات الأساسية'],
+    ['overview','التحليل الذاتي'],
+    ...NAMES.map((n,i)=>[
+      'domain'+i,
+      n
+    ])
+  ];
+
+  el('tabs').innerHTML=pages.map(([id,t])=>
+    `<button
+      class="tab ${page===id?'active':''}"
+      onclick="navigate('${id}')">
+      ${esc(t)}
+    </button>`
+  ).join('');
+
+  if(!db) {
+    el('app').innerHTML=
+      '<div class="loading">جارٍ تحميل البيانات…</div>';
+    return;
+  }
+
+  el('app').innerHTML=
+    page==='identity'
+      ? identity()
+      : page==='overview'
+        ? overview()
+        : domain(
+            Math.max(
+              0,
+              Math.min(
+                4,
+                Number(page.replace('domain',''))||0
+              )
+            )
+          );
+
+  if(page.startsWith('domain')) {
+    filterStandards();
+  }
+}
+
+function navigate(p) {
+  page=p;
+  searchTerm='';
   render();
 
-  status(
-   'آخر تحديث ناجح: '+
-   new Date().toLocaleString('ar-OM')
-  );
- };
-
- script.onerror=()=>fail('تعذر الوصول إلى الخدمة');
-
- script.src=API+
-  '?callback='+cb+
-  '&_='+Date.now();
-
- document.head.appendChild(script);
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  });
 }
 
-function togglePresentation(){
- present=!present;
+function status(t) {
+  el('status').textContent=t;
+}
 
- document.body.classList.toggle('presentation',present);
+function valid(d) {
+  return d &&
+    d.success===true &&
+    d.sheets &&
+    typeof d.sheets==='object';
+}
 
- if(present){
-  document.documentElement.requestFullscreen?.().catch(()=>{});
- }else if(document.fullscreenElement){
-  document.exitFullscreen?.().catch(()=>{});
- }
+function loadData() {
+  const n=++serial;
+  const cb='adExcellence_'+n;
+  const script=document.createElement('script');
+
+  let done=false;
+
+  status('جارٍ تحديث البيانات من Google Sheets…');
+
+  const timer=setTimeout(
+    ()=>fail('انتهت مهلة الاتصال'),
+    20000
+  );
+
+  function clear() {
+    clearTimeout(timer);
+    delete window[cb];
+    script.remove();
+  }
+
+  function fail(msg) {
+    if(done)return;
+
+    done=true;
+    clear();
+
+    status(
+      'تعذر التحديث: '+msg+
+      (db?' · تُعرض آخر نسخة ناجحة':'')
+    );
+
+    if(!db) {
+      el('app').innerHTML=`
+        <section class="card">
+          <h2>تعذر الاتصال</h2>
+
+          <p>
+            تحقق من رابط خدمة Google Apps Script
+            وصلاحية النشر.
+          </p>
+
+          <button class="btn primary"
+            onclick="loadData()">
+            إعادة المحاولة
+          </button>
+        </section>`;
+    }
+  }
+
+  window[cb]=function(d) {
+    if(!valid(d)) {
+      fail('البيانات غير صالحة');
+      return;
+    }
+
+    if(done)return;
+
+    done=true;
+    clear();
+
+    db=d;
+
+    try {
+      localStorage.setItem(
+        CACHE,
+        JSON.stringify(d)
+      );
+    }catch(e) {}
+
+    render();
+
+    status(
+      'آخر تحديث ناجح: '+
+      new Date().toLocaleString('ar-OM')
+    );
+  };
+
+  script.onerror=
+    ()=>fail('تعذر الوصول إلى الخدمة');
+
+  script.src=
+    API+
+    '?callback='+cb+
+    '&_='+Date.now();
+
+  document.head.appendChild(script);
+}
+
+function togglePresentation() {
+  present=!present;
+
+  document.body.classList.toggle(
+    'presentation',
+    present
+  );
+
+  if(present) {
+    document.documentElement
+      .requestFullscreen?.()
+      .catch(()=>{});
+  }else if(document.fullscreenElement) {
+    document.exitFullscreen?.().catch(()=>{});
+  }
 }
 
 document.addEventListener('keydown',e=>{
- if(!present)return;
+  if(!present)return;
 
- const pages=[
-  'identity',
-  'overview',
-  ...NAMES.map((_,i)=>'domain'+i)
- ];
+  const pages=[
+    'identity',
+    'overview',
+    ...NAMES.map((_,i)=>'domain'+i)
+  ];
 
- const i=pages.indexOf(page);
+  const i=pages.indexOf(page);
 
- if(e.key==='ArrowLeft'){
-  navigate(pages[Math.min(i+1,pages.length-1)]);
- }
+  if(e.key==='ArrowLeft') {
+    navigate(
+      pages[Math.min(i+1,pages.length-1)]
+    );
+  }
 
- if(e.key==='ArrowRight'){
-  navigate(pages[Math.max(i-1,0)]);
- }
+  if(e.key==='ArrowRight') {
+    navigate(
+      pages[Math.max(i-1,0)]
+    );
+  }
 
- if(e.key==='Escape'){
-  present=false;
-  document.body.classList.remove('presentation');
- }
+  if(e.key==='Escape') {
+    present=false;
+    document.body.classList.remove(
+      'presentation'
+    );
+  }
 });
 
-try{
- const c=JSON.parse(localStorage.getItem(CACHE));
+// استعادة آخر نسخة محفوظة
+try {
+  const saved=localStorage.getItem(CACHE);
 
- if(valid(c)){
-  db=c;
-  render();
-  status('بيانات محفوظة محليًا · جارٍ التحديث');
- }
-}catch(e){}
+  if(saved) {
+    const c=JSON.parse(saved);
 
+    if(valid(c)) {
+      db=c;
+      render();
+
+      status(
+        'بيانات محفوظة محليًا · جارٍ التحديث'
+      );
+    }
+  }
+}catch(e) {}
+
+// الاتصال المباشر بجدول Google Sheets
 loadData();
+
 </script>
 </body>
 </html>
