@@ -1,727 +1,180 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>نبض الإجادة | مدرسة أبو الدرداء</title>
+<title>نبض الإجادة | أبو الدرداء</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#07182b;--panel:#102943;--panel2:#153553;
-  --line:#ffffff20;--text:#f5f9ff;--muted:#acc4d7;
-  --gold:#efc775;--cyan:#61d7e4;--green:#76e1b1;
-  --red:#ffa8a8;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Cairo,Tahoma,sans-serif}
-button,input{font-family:inherit}
-button{cursor:pointer}
-header{
-  position:sticky;top:0;z-index:20;
-  background:#07182bed;backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--line);
-  padding:14px 4%;
-}
-.head{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{
-  width:54px;height:54px;border-radius:16px;
-  display:grid;place-items:center;font-size:27px;
-  background:linear-gradient(135deg,#164b69,#188ca1);
-  border:1px solid #ffffff40;
-}
-.brand strong{display:block;font-size:20px}
-.brand small{color:var(--muted)}
-.actions{display:flex;gap:9px;flex-wrap:wrap}
-.btn{
-  background:#ffffff12;color:white;border:1px solid #ffffff30;
-  border-radius:12px;padding:10px 16px;font-weight:800;
-}
-.btn:hover{background:#ffffff24}
-.btn.primary{background:linear-gradient(135deg,#0f829b,#145d8b);border:0}
-nav{display:flex;gap:9px;overflow-x:auto;padding-top:15px}
-nav button{
-  white-space:nowrap;border:1px solid var(--line);
-  color:var(--muted);background:#ffffff08;
-  padding:10px 16px;border-radius:12px;font-weight:800;
-}
-nav button.active{background:#196b85;color:#fff;border-color:#53c8dc}
-main{max-width:1400px;margin:auto;padding:28px 4% 70px}
-.hero{
-  border:1px solid #ffffff25;border-radius:26px;padding:36px;
-  background:
-  radial-gradient(circle at 15% 20%,#168b9b55,transparent 35%),
-  linear-gradient(135deg,#153b5d,#0a2038 75%);
-  margin-bottom:22px;position:relative;overflow:hidden;
-}
-.kicker{color:var(--gold);font-size:13px;font-weight:900;letter-spacing:2px}
-h1{font-size:clamp(27px,4vw,48px);margin:8px 0 12px;line-height:1.5}
-h2{font-size:22px;margin:0 0 14px;color:#fff}
-h3{margin:0 0 10px;font-size:17px;color:var(--gold)}
-p{line-height:2;margin:7px 0;color:var(--muted)}
-.hero p{font-size:17px;max-width:850px}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}
-.card{
-  background:linear-gradient(145deg,var(--panel),#0b2138);
-  border:1px solid var(--line);border-radius:20px;padding:22px;
-  margin-bottom:16px;min-width:0;
-}
-.stat{text-align:center}
-.stat strong{display:block;font-size:35px;color:var(--cyan);line-height:1.5}
-.stat span{font-size:13px;color:var(--muted)}
-.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.info{
-  background:#ffffff08;border:1px solid var(--line);
-  padding:15px;border-radius:14px;min-width:0;
-}
-.info small{display:block;color:var(--muted);margin-bottom:7px}
-.info strong{display:block;overflow-wrap:anywhere;line-height:1.8;font-size:15px}
-.section-label{
-  color:var(--cyan);font-size:13px;font-weight:900;
-  margin-bottom:12px;letter-spacing:1px;
-}
-.domain-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
-.domain-card{
-  background:linear-gradient(140deg,#163c58,#0c263e);
-  border:1px solid #ffffff27;border-radius:19px;padding:22px;
-}
-.domain-card h3{font-size:20px;color:white}
-.counters{display:flex;gap:12px;flex-wrap:wrap;margin:15px 0}
-.pill{background:#ffffff12;border-radius:50px;padding:7px 13px;font-size:13px}
-.pill.good{color:var(--green)}
-.pill.warn{color:var(--gold)}
-.entries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
-.entry{
-  border:1px solid var(--line);background:#ffffff08;
-  padding:18px;border-radius:16px;margin-bottom:12px;
-}
-.entry p{color:white;white-space:pre-wrap;overflow-wrap:anywhere}
-.evidence{
-  border-right:3px solid var(--cyan);
-  margin-top:12px;padding:9px 13px;
-  background:#ffffff08;color:var(--muted);
-  border-radius:7px;font-size:13px;
-  white-space:pre-wrap;overflow-wrap:anywhere;
-}
-.empty{color:var(--muted);padding:22px;text-align:center;border:1px dashed #ffffff35;border-radius:15px}
-.status{font-size:12px;color:var(--muted)}
-.footer{text-align:center;padding:30px;color:var(--muted);font-size:13px}
-.loading{padding:40px;text-align:center;font-size:20px}
-.fullscreen header{position:relative}
-.fullscreen main{max-width:1650px}
-.fullscreen .hero{padding:55px}
-.fullscreen .card{padding:30px}
-@media(max-width:900px){
- .grid{grid-template-columns:repeat(2,1fr)}
- .info-grid{grid-template-columns:repeat(2,1fr)}
- .entries,.domain-grid{grid-template-columns:1fr}
-}
-@media(max-width:550px){
- .grid,.info-grid{grid-template-columns:1fr}
- .hero{padding:23px}
- .card{padding:17px}
- .brand strong{font-size:16px}
-}
-@media print{
- header .actions,nav,.btn{display:none!important}
- body{background:white;color:black}
- .card,.hero,.entry,.domain-card{background:white;color:black;border:1px solid #ccc}
- h1,h2,h3,.entry p{color:black}
- p{color:#444}
-}
+:root{--bg:#06192b;--surface:#0c2b45;--surface2:#123a56;--line:#ffffff24;--text:#f5fbff;--sub:#bad0dd;--aqua:#66e0de;--gold:#f1cd83;--green:#92e3ba;--orange:#ffce9b}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 20% -10%,#17658a45,transparent 40%),var(--bg);color:var(--text);font-family:Cairo,Tahoma,sans-serif}button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.shell{max-width:1450px;margin:auto;padding:0 25px}header{position:sticky;top:0;z-index:20;background:#071a2ce8;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.topbar{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:14px 0;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:13px}.brand-mark{width:55px;height:55px;border-radius:18px;display:grid;place-items:center;font-size:26px;color:#052b3e;background:linear-gradient(140deg,var(--gold),#fff2d1);box-shadow:0 5px 28px #efca8040}.brand h2{font-size:19px;margin:0}.brand small{color:var(--sub);font-size:11px}.tools{display:flex;gap:8px;flex-wrap:wrap}.btn{background:#ffffff0e;border:1px solid #ffffff2c;color:#fff;border-radius:12px;padding:9px 15px;font-weight:800;transition:.2s}.btn:hover{background:#ffffff22;transform:translateY(-1px)}.btn.primary{background:linear-gradient(135deg,#1b9bad,#196485);border:0}.btn.gold{background:linear-gradient(135deg,#f4d995,#c99b4e);color:#14283a;border:0}.nav{display:flex;gap:7px;overflow:auto;padding:0 0 12px;scrollbar-width:thin}.nav button{white-space:nowrap;padding:9px 13px;background:#ffffff0a;border:1px solid var(--line);color:var(--sub);border-radius:11px;font-weight:800;font-size:12px}.nav button.active{background:#1c7c96;color:white;border-color:#5ad2d7}main{padding-top:25px;padding-bottom:65px;min-height:65vh}.hero{position:relative;overflow:hidden;border:1px solid #ffffff30;border-radius:25px;background:radial-gradient(circle at 14% 22%,#219ab24a,transparent 36%),linear-gradient(130deg,#164a68,#0b2741 75%);padding:38px;margin-bottom:20px}.hero:after{content:"✦";position:absolute;left:38px;top:8px;font-size:160px;color:#ffffff08;pointer-events:none}.eyebrow{font-size:12px;color:var(--gold);letter-spacing:2px;font-weight:900}.hero h1{font-size:clamp(27px,4vw,45px);line-height:1.5;margin:8px 0}.hero p{color:#d2e8f2;max-width:850px;font-size:15px;line-height:2}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}.card{background:linear-gradient(150deg,var(--surface),#0a233a);border:1px solid var(--line);border-radius:20px;padding:23px;margin-bottom:16px;min-width:0}.card h2{font-size:20px;margin:0 0 15px}.card h3{font-size:16px;color:var(--gold);margin:0 0 10px}.card p{line-height:2;color:var(--sub);margin:7px 0;white-space:pre-line}.stat{text-align:center}.stat b{display:block;color:var(--aqua);font-size:35px;line-height:1.5}.stat span{font-size:12px;color:var(--sub)}.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.info{border:1px solid #ffffff19;border-radius:14px;background:#ffffff08;padding:14px;min-width:0}.info small{display:block;color:var(--sub);font-size:12px;margin-bottom:6px}.info strong{font-size:14px;line-height:1.9;display:block;overflow-wrap:anywhere;white-space:pre-line}.section-tag{font-size:11px;font-weight:900;letter-spacing:1px;color:var(--aqua);margin-bottom:9px}.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.domain-card{border:1px solid #ffffff28;border-radius:20px;padding:23px;background:linear-gradient(130deg,#174760,#0c2b44)}.domain-card h3{font-size:20px;color:#fff;line-height:1.8;margin:8px 0}.pills{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.pill{display:inline-flex;align-items:center;background:#ffffff12;border-radius:40px;padding:5px 12px;font-size:11px}.pill.green{color:var(--green)}.pill.gold{color:var(--gold)}.criterion{margin:16px 0;border:1px solid #ffffff2b;border-radius:19px;overflow:hidden;background:#ffffff05}.criterion-head{padding:19px 22px;background:linear-gradient(110deg,#17516a,#123a55);border-bottom:1px solid #ffffff25}.criterion-head h3{font-size:18px;color:#fff;margin:7px 0;line-height:1.8}.criterion-body{padding:20px}.entries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.entry-column{background:#ffffff06;border:1px solid #ffffff1a;border-radius:16px;padding:17px}.entry-column h4{margin:0 0 14px;font-size:15px}.entry-column h4.good{color:var(--green)}.entry-column h4.warn{color:var(--gold)}.entry{border:1px solid #ffffff1b;border-radius:13px;padding:15px;margin-bottom:12px;background:#ffffff07}.entry p{color:#f7fcff;font-size:13px;line-height:2;white-space:pre-line;overflow-wrap:anywhere;margin:0}.evidence{border-right:3px solid var(--aqua);background:#ffffff0a;padding:12px;margin-top:12px;border-radius:9px;font-size:12px;color:#d4e6ee;line-height:2;white-space:pre-line;overflow-wrap:anywhere}.evidence b{display:block;color:var(--aqua);margin-bottom:4px}.empty{padding:20px;border:1px dashed #ffffff33;color:var(--sub);text-align:center;border-radius:13px;font-size:13px}.search{width:100%;background:#ffffff0e;border:1px solid #ffffff35;color:white;padding:13px 17px;border-radius:13px;outline:none;margin:10px 0 18px}.search::placeholder{color:#b3c9d7}.compass{border:1px solid #e8c47b77;background:radial-gradient(circle at 10% 20%,#e8c47b20,transparent 35%),linear-gradient(130deg,#1b4556,#0b293e);border-radius:21px;padding:26px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.compass h2{margin:0 0 8px;color:var(--gold);font-size:22px}.compass p{color:#d5e4eb;margin:0;line-height:2}.compass-icon{font-size:45px}.status{text-align:center;color:var(--sub);font-size:11px;padding:12px}.footer{text-align:center;padding:20px;color:#abc5d4;font-size:12px;border-top:1px solid var(--line)}.hint{font-size:12px;color:var(--sub)}.loading{text-align:center;padding:60px;font-size:19px;color:var(--aqua)}.review-mode main{max-width:1700px}.review-mode .hero{padding:50px}.review-mode .card{padding:29px}.review-mode .criterion-head{padding:25px}.review-mode .entry p{font-size:15px}.hide{display:none!important}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.shell{padding:0 13px}.hero{padding:23px}.grid,.info-grid,.split,.entries{grid-template-columns:1fr}.card{padding:17px}.criterion-body{padding:12px}.topbar{align-items:flex-start}.brand h2{font-size:16px}}
+@media print{header,.tools,.nav,.search,.btn{display:none!important}body{background:white;color:#111}.hero,.card,.criterion,.entry,.info,.compass{background:white;color:#111;border:1px solid #aaa;break-inside:avoid}.hero h1,.card h2,.criterion h3,.entry p,.info strong{color:#111}.hero p,.card p{color:#444}}
 </style>
 </head>
 <body>
-
 <header>
- <div class="head">
-  <div class="brand">
-   <div class="logo">✦</div>
-   <div>
-    <strong>نبض الإجادة | أبو الدرداء</strong>
-    <small>منصة التقويم الذاتي والتميز المؤسسي 2026/2027م</small>
-   </div>
-  </div>
-  <div class="actions">
-   <button class="btn" onclick="loadData(true)">↻ تحديث البيانات</button>
-   <button class="btn primary" onclick="togglePresentation()">◉ وضع العرض</button>
-  </div>
- </div>
- <nav id="nav"></nav>
-</header>
-
-<main id="app">
- <div class="loading">جارٍ الاتصال بقاعدة بيانات مدرسة أبو الدرداء...</div>
-</main>
-
-<div class="footer">
- مدرسة أبو الدرداء للبنين (5–12) | نبض الإجادة | التقويم الذاتي والتحسين المستمر
- <div class="status" id="status"></div>
+<div class="shell">
+<div class="topbar">
+<div class="brand">
+<div class="brand-mark">✦</div>
+<div>
+<h2>نبض الإجادة | مدرسة أبو الدرداء</h2>
+<small>منصة التقويم الذاتي والتميز المؤسسي · 2026/2027م</small>
 </div>
-
+</div>
+<div class="tools">
+<button class="btn" onclick="loadData(true)">↻ تحديث البيانات</button>
+<button class="btn primary" onclick="toggleReview()">◉ وضع المراجعة</button>
+<a class="btn gold" href="https://sultanalwaeli.github.io/compass/" target="_blank" rel="noopener noreferrer">◈ البوصلة الاستراتيجية ↗</a>
+</div>
+</div>
+<div class="nav" id="nav"></div>
+</div>
+</header>
+<main class="shell" id="app">
+<div class="loading">جارٍ تحميل بيانات مدرسة أبو الدرداء...</div>
+</main>
+<div class="status" id="status"></div>
+<footer class="footer">مدرسة أبو الدرداء للبنين (5–12) · نبض الإجادة · التقويم الذاتي والتحسين المستمر</footer>
 <script>
 "use strict";
-
-/* رابط Google Apps Script الخاص بمدرسة أبو الدرداء */
-const API_URL =
-"https://script.google.com/macros/s/AKfycbwPtbrsr5nRkxh1k-AKQWVgLlSYlUuhPvTo0lGqBkwl97HS9c05F2w_sC-tzUcAvtPN9Q/exec";
-
-const CACHE_KEY="abu_dardaa_excellence_data_v1";
-
-const DOMAIN_NAMES=[
- "الإنجاز الدراسي",
- "النمو الشخصي",
- "التدريس والتقويم",
- "مناخ المدرسة وبيئة التعلم",
- "القيادة والإدارة والحوكمة"
-];
-
-let database=null;
-let currentPage="identity";
-let presentation=false;
-let requestNumber=0;
-
+const API_URL="https://script.google.com/macros/s/AKfycbwPtbrsr5nRkxh1k-AKQWVgLlSYlUuhPvTo0lGqBkwl97HS9c05F2w_sC-tzUcAvtPN9Q/exec";
+const COMPASS_URL="https://sultanalwaeli.github.io/compass/";
+const CACHE_KEY="abu_dardaa_excellence_pro_v2";
+const DOMAIN_NAMES=["الإنجاز الدراسي","النمو الشخصي","التدريس والتقويم","مناخ المدرسة وبيئة التعلم","القيادة والإدارة والحوكمة"];
+let db=null,page="identity",review=false,requestId=0,searchTerm="";
 const $=id=>document.getElementById(id);
-
-function escapeHTML(value){
- return String(value??"").replace(/[&<>"']/g,c=>({
-  "&":"&amp;","<":"&lt;",">":"&gt;",
-  '"':"&quot;","'":"&#39;"
- })[c]);
-}
-
-function normalize(value){
- return String(value??"").trim();
-}
-
-function safeLink(value){
- const url=normalize(value);
- try{
-  const u=new URL(url);
-  return ["https:","http:"].includes(u.protocol)?u.href:"";
- }catch{return "";}
-}
-
-function textValue(value){
- const s=normalize(value);
- const url=safeLink(s);
- if(url){
-  return `<a href="${escapeHTML(url)}" target="_blank"
-   rel="noopener noreferrer" style="color:var(--cyan)">
-   فتح الرابط ↗</a>`;
- }
- return escapeHTML(s).replace(/\n/g,"<br>");
-}
-
-function getSheet(name){
- return database?.sheets?.[name]||{rows:[],headers:[]};
-}
-
-function identityRows(){
- return getSheet("هوية المدرسة").rows||[];
-}
-
-function schoolValue(key){
- const rows=identityRows();
- for(const row of rows){
-  const val=normalize(row[key]);
-  if(val)return val;
- }
- return normalize(database?.school?.[key]);
-}
-
-function isFilled(value){
- return normalize(value)!=="";
-}
-
-function numberValue(value){
- const n=Number(String(value??"").replace(/,/g,""));
- return Number.isFinite(n)?n:0;
-}
-
-function info(label,value){
- if(!isFilled(value))return "";
- return `<div class="info">
-  <small>${escapeHTML(label)}</small>
-  <strong>${textValue(value)}</strong>
- </div>`;
-}
-
-function section(title,content){
- return `<section class="card">
-  <h2>${escapeHTML(title)}</h2>${content}
- </section>`;
-}
-
-function hero(kicker,title,description){
- return `<div class="hero">
-  <div class="kicker">${escapeHTML(kicker)}</div>
-  <h1>${escapeHTML(title)}</h1>
-  <p>${escapeHTML(description)}</p>
- </div>`;
-}
-
-function stat(value,label){
- return `<div class="card stat">
-  <strong>${escapeHTML(value)}</strong>
-  <span>${escapeHTML(label)}</span>
- </div>`;
-}
-
-function getDomains(){
- return DOMAIN_NAMES.map((name,i)=>{
-  const domain=(database?.domains||[]).find(d=>d.name===name);
-  return domain||{
-   id:i+1,name,strengths:[],improvements:[],
-   strengthsCount:0,improvementsCount:0
-  };
- });
-}
-
-function renderNavigation(){
- const items=[
-  ["identity","البيانات الأساسية"],
-  ["overview","التحليل الذاتي"],
-  ...getDomains().map((d,i)=>["domain"+i,d.name])
- ];
-
- $("nav").innerHTML=items.map(([id,label])=>
-  `<button class="${currentPage===id?"active":""}"
-   onclick="navigate('${id}')">${escapeHTML(label)}</button>`
- ).join("");
-}
-
-function navigate(page){
- currentPage=page;
- render();
- window.scrollTo({top:0,behavior:"smooth"});
-}
-
-function renderIdentity(){
- const name=schoolValue("اسم المدرسة")||
- "مدرسة أبو الدرداء للبنين (5–12)";
-
- const studentCount=schoolValue("عدد الطلبة")||
- schoolValue("عدد الطلاب");
-
- const lower=schoolValue("عدد طلبة الصفوف 5-8")||
- schoolValue("عدد الطلبة 5-8");
-
- const upper=schoolValue("عدد طلبة الصفوف 9-12")||
- schoolValue("عدد الطلبة 9-12");
-
- const count=studentCount||
- ((lower||upper)?String(numberValue(lower)+numberValue(upper)):"");
-
- const code=schoolValue("الرمز المدرسي")||"7237";
- const year=schoolValue("السنة الدراسية")||"2026/2027";
-
- let html=hero(
-  "01 · SCHOOL PROFILE",
-  "البيانات الأساسية للمدرسة",
-  "من هنا تبدأ حكاية أبو الدرداء؛ هويتها، ورسالتها، ومجتمعها المدرسي، ومكوناتها ومكنوناتها."
- );
-
- html+=`<div class="grid">
-  ${stat(code,"الرمز المدرسي")}
-  ${stat(year,"العام الدراسي")}
-  ${stat(count||"—","إجمالي الطلبة")}
-  ${stat("5","مجالات التقويم الذاتي")}
- </div>`;
-
- const basicKeys=[
-  "اسم المدرسة","الرمز المدرسي","السنة الدراسية",
-  "المديرية","المحافظة","الولاية","القرية",
-  "المرحلة أو الصف","نوع المدرسة","نوع المبنى",
-  "سنة تشغيل المبنى","سنة إنشاء المدرسة",
-  "عدد الشعب","بداية الدوام","نهاية الدوام"
- ];
-
- html+=section("01 · الهوية والموقع",
-  `<div class="info-grid">${
-   basicKeys.map(k=>info(k,schoolValue(k))).join("")
-  }</div>`
- );
-
- const peopleKeys=[
-  "مدير المدرسة","المدير المساعد",
-  "مشرف الإدارة المدرسية","عدد الطلبة",
-  "عدد الطلاب","عدد الشعب","المعلمون",
-  "المعلمون الأوائل","الاختصاصيون",
-  "الفنيون","الهيئة التعليمية",
-  "الهيئة الإدارية","عدد المعلمين",
-  "عدد الإداريين","عدد الفنيين"
- ];
-
- html+=section("02 · القيادة والموارد البشرية",
-  `<div class="info-grid">${
-   peopleKeys.map(k=>info(k,schoolValue(k))).join("")
-  }</div>`
- );
-
- const studentKeys=[
-  "عدد الطلبة","عدد الطلاب",
-  "عدد طلبة الصفوف 5-8","عدد الطلبة 5-8",
-  "عدد طلبة الصفوف 9-12","عدد الطلبة 9-12",
-  "الصف الخامس","الصف السادس",
-  "الصف السابع","الصف الثامن",
-  "الصف التاسع","الصف العاشر",
-  "الصف الحادي عشر","الصف الثاني عشر",
-  "الطلبة العمانيون","الطلبة غير العمانيين",
-  "نسبة الطلبة العمانيين","نسبة غير العمانيين"
- ];
-
- html+=section("03 · المجتمع الطلابي",
-  `<div class="info-grid">${
-   studentKeys.map(k=>info(k,schoolValue(k))).join("")
-  }</div>`
- );
-
- const vision=schoolValue("رؤية المدرسة");
- const mission=schoolValue("رسالة المدرسة");
- const intro=schoolValue("نبذة عامة عن المدرسة");
-
- if(intro){
-  html+=section("04 · أبو الدرداء في سطور",
-   `<p>${textValue(intro)}</p>`);
- }
-
- if(vision||mission){
-  html+=section("05 · الرؤية والرسالة",
-   `${vision?`<h3>رؤية المدرسة</h3><p>${textValue(vision)}</p>`:""}
-    ${mission?`<h3>رسالة المدرسة</h3><p>${textValue(mission)}</p>`:""}`
-  );
- }
-
- const strategic=schoolValue("الأهداف الاستراتيجية");
- if(strategic){
-  html+=section("06 · الأهداف الاستراتيجية",
-   `<p>${textValue(strategic)}</p>`);
- }
-
- // عرض بقية بيانات الهوية دون إهمال الحقول غير المتوقعة
- const used=new Set([
-  ...basicKeys,...peopleKeys,...studentKeys,
-  "رؤية المدرسة","رسالة المدرسة",
-  "نبذة عامة عن المدرسة","الأهداف الاستراتيجية"
- ]);
-
- const extras=[];
- const seen=new Set();
-
- identityRows().forEach(row=>{
-  Object.entries(row).forEach(([key,value])=>{
-   if(!used.has(key)&&isFilled(value)){
-    const unique=key+"|"+value;
-    if(!seen.has(unique)){
-     extras.push([key,value]);
-     seen.add(unique);
-    }
-   }
-  });
- });
-
- if(extras.length){
-  html+=section("07 · مكونات المدرسة ومكنوناتها",
-   `<div class="info-grid">${
-    extras.map(([k,v])=>info(k,v)).join("")
-   }</div>`
-  );
- }
-
- html+=`<div class="card" style="text-align:center">
-  <h2>من هوية المدرسة إلى تحليل أدائها</h2>
-  <p>ننتقل الآن إلى قراءة الواقع المدرسي في مجالات التقويم الخمسة.</p>
-  <button class="btn primary" onclick="navigate('overview')">
-   الانتقال إلى التحليل الذاتي ←
-  </button>
- </div>`;
-
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function norm(v){return String(v??"").trim()}
+function filled(v){return norm(v)!==""}
+function safeUrl(v){try{const u=new URL(norm(v));return ["https:","http:"].includes(u.protocol)?u.href:""}catch{return ""}}
+function fmt(v){const s=norm(v),u=safeUrl(s);if(u)return `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer" style="color:var(--aqua);text-decoration:underline">فتح الشاهد أو الرابط ↗</a>`;return esc(s).replace(/\n/g,"<br>")}
+function sheet(name){return db?.sheets?.[name]||{rows:[],headers:[]}}
+function identityRows(){return sheet("هوية المدرسة").rows||[]}
+function field(row,aliases){for(const alias of aliases){for(const [k,v] of Object.entries(row||{})){if(norm(k)===alias&&filled(v))return norm(v)}}return ""}
+function identityValue(...aliases){for(const r of identityRows()){const v=field(r,aliases);if(v)return v}return ""}
+function info(label,value){return filled(value)?`<div class="info"><small>${esc(label)}</small><strong>${fmt(value)}</strong></div>`:""}
+function box(title,content){return `<section class="card"><h2>${esc(title)}</h2>${content}</section>`}
+function hero(kicker,title,description){return `<div class="hero"><div class="eyebrow">${esc(kicker)}</div><h1>${esc(title)}</h1><p>${esc(description)}</p></div>`}
+function stat(value,label){return `<div class="card stat"><b>${esc(value)}</b><span>${esc(label)}</span></div>`}
+function domains(){return DOMAIN_NAMES.map((name,i)=>db?.domains?.find(d=>d.name===name)||{id:i+1,name,strengths:[],improvements:[]})}
+function navigate(p){page=p;searchTerm="";render();window.scrollTo({top:0,behavior:"smooth"})}
+function nav(){const pages=[["identity","01 · البيانات الأساسية"],["overview","02 · التحليل الذاتي"],...DOMAIN_NAMES.map((n,i)=>["domain"+i,(i+1)+" · "+n])];$("nav").innerHTML=pages.map(([id,label])=>`<button class="${page===id?"active":""}" onclick="navigate('${id}')">${esc(label)}</button>`).join("")}
+function identity(){
+ const rows=identityRows(),name=identityValue("اسم المدرسة")||"مدرسة أبو الدرداء للبنين (5–12)";
+ const total=identityValue("إجمالي الطلبة","عدد الطلبة","عدد الطلاب")||"668";
+ const code=identityValue("الرمز المدرسي","رمز المدرسة")||"7237";
+ const year=identityValue("العام الدراسي","السنة الدراسية")||"2026/2027";
+ let html=hero("01 · SCHOOL IDENTITY","البيانات الأساسية للمدرسة","أبو الدرداء... مدرسة تصنع المعرفة، وتستثمر الطاقات، وتؤمن بأن جودة التعليم تُقاس بأثرها في تعلم الطلبة.");
+ html+=`<div class="grid">${stat(code,"الرمز المدرسي")}${stat(year,"العام الدراسي")}${stat(total,"إجمالي الطلبة")}${stat("5","مجالات التقويم الذاتي")}</div>`;
+ const identityKeys=["اسم المدرسة","الرمز المدرسي","العام الدراسي","المحافظة","الولاية","القرية","المديرية","نوع المدرسة","نوع المبنى","تاريخ تشغيل المبنى","سنة تشغيل المبنى","الصفوف الدراسية","الصفوف التي تخدمها المدرسة","بداية الدوام","نهاية الدوام"];
+ const peopleKeys=["مدير المدرسة","مدير المدرسة المساعد","المدير المساعد","مشرف الإدارة المدرسية","عدد المعلمين","المعلمون","عدد المعلمين الأوائل","المعلمون الأوائل","عدد الإداريين","عدد الاختصاصيين","الاختصاصيون","عدد الفنيين","الفنيون"];
+ const studentKeys=["إجمالي الطلبة","عدد الطلبة","عدد الطلاب","طلبة الصفوف (5-8)","عدد طلبة الصفوف 5-8","طلبة الصفوف (9-12)","عدد طلبة الصفوف 9-12","عدد الشعب","نسبة الطلبة العمانيين","نسبة غير العمانيين","نسبة الطلبة غير العمانيين","متوسط الحضور"];
+ function sectionByKeys(title,keys){const found=keys.map(k=>info(k,identityValue(k))).filter(Boolean);return found.length?box(title,`<div class="info-grid">${found.join("")}</div>`):""}
+ html+=sectionByKeys("01 · الهوية والموقع",identityKeys);
+ html+=sectionByKeys("02 · القيادة والموارد البشرية",peopleKeys);
+ html+=sectionByKeys("03 · المجتمع الطلابي",studentKeys);
+ const vision=identityValue("الرؤية","رؤية المدرسة"),mission=identityValue("الرسالة","رسالة المدرسة");
+ if(vision||mission)html+=box("04 · الرؤية والرسالة",`${vision?`<h3>رؤيتنا</h3><p>${fmt(vision)}</p>`:""}${mission?`<h3>رسالتنا</h3><p>${fmt(mission)}</p>`:""}`);
+ const used=new Set([...identityKeys,...peopleKeys,...studentKeys,"الرؤية","رؤية المدرسة","الرسالة","رسالة المدرسة","الأهداف الاستراتيجية","الهدف الاستراتيجي","الأهداف السنوية","أهداف العام الدراسي"]);
+ const extras=[],seen=new Set();
+ rows.forEach(row=>Object.entries(row).forEach(([key,value])=>{
+  if(used.has(norm(key))||!filled(value))return;
+  const id=key+"|"+value;if(seen.has(id))return;seen.add(id);extras.push([key,value]);
+ }));
+ if(extras.length)html+=box("05 · مكونات المدرسة ومكنوناتها",`<div class="info-grid">${extras.map(([k,v])=>info(k,v)).join("")}</div>`);
+ html+=`<div class="compass"><div><div class="section-tag">STRATEGIC DIRECTION</div><h2>بوصلة أبو الدرداء الاستراتيجية</h2><p>تعرّف إلى الأهداف الاستراتيجية للمدرسة وأهداف العام الدراسي من خلال منصتنا التفاعلية المستقلة.</p></div><a class="btn gold" href="${COMPASS_URL}" target="_blank" rel="noopener noreferrer">استكشف البوصلة الاستراتيجية ↗</a></div>`;
+ html+=`<div class="card" style="text-align:center"><h2>من هويتنا إلى تحليل أدائنا</h2><p>اكتشف المجالات الخمسة ومعاييرها وجوانب الإجادة والتحسين وشواهدها.</p><button class="btn primary" onclick="navigate('overview')">الانتقال إلى التحليل الذاتي ←</button></div>`;
  return html;
 }
-
-function renderOverview(){
- const domains=getDomains();
- const strengths=domains.reduce(
-  (sum,d)=>sum+(d.strengths||[]).length,0
- );
- const improvements=domains.reduce(
-  (sum,d)=>sum+(d.improvements||[]).length,0
- );
-
- let html=hero(
-  "02 · SELF EVALUATION",
-  "التحليل الذاتي للمدرسة",
-  "قراءة شاملة للأداء المدرسي في ضوء مجالات التقويم الذاتي، وجوانب الإجادة والتحسين والأدلة الداعمة."
- );
-
- html+=`<div class="grid">
-  ${stat("5","مجالات التقويم")}
-  ${stat(strengths,"جوانب الإجادة المسجلة")}
-  ${stat(improvements,"جوانب التحسين المسجلة")}
-  ${stat(strengths+improvements,"إجمالي البنود المسجلة")}
- </div>`;
-
- html+=`<div class="domain-grid">`;
-
- domains.forEach((d,i)=>{
-  const a=(d.strengths||[]).length;
-  const b=(d.improvements||[]).length;
-
-  html+=`<article class="domain-card">
-   <div class="section-label">المجال ${i+1}</div>
-   <h3>${escapeHTML(d.name)}</h3>
-   <div class="counters">
-    <span class="pill good">✦ جوانب الإجادة: ${a}</span>
-    <span class="pill warn">◈ جوانب التحسين: ${b}</span>
-   </div>
-   <p>استعراض جوانب الإجادة، وفرص التحسين، والأدلة والشواهد.</p>
-   <button class="btn primary" onclick="navigate('domain${i}')">
-    استكشاف المجال ←
-   </button>
-  </article>`;
+function domainRecords(name){
+ const raw=sheet(name).rows||[];
+ return raw.map((r,i)=>({
+  index:i,
+  criterion:field(r,["المعيار","المعيار الفرعي","معيار التقويم","المعيار/المؤشر"]),
+  strength:field(r,["جوانب الإجادة","جانب الإجادة","جوانب الاجادة"]),
+  strengthEvidence:field(r,["أدلة الإجادة","دليل الإجادة","أدلة الاجادة"]),
+  improvement:field(r,["جوانب التحسين","جانب التحسين","الجوانب التي تحتاج إلى تحسين"]),
+  improvementEvidence:field(r,["أدلة التحسين","دليل التحسين"])
+ })).filter(r=>r.criterion||r.strength||r.improvement||r.strengthEvidence||r.improvementEvidence);
+}
+function grouped(name){
+ const records=domainRecords(name),groups=[],map=new Map();
+ records.forEach(r=>{
+  const criterion=r.criterion||"بنود المجال غير المصنفة بمعيار";
+  if(!map.has(criterion)){const g={criterion,items:[]};map.set(criterion,g);groups.push(g)}
+  map.get(criterion).items.push(r);
  });
-
- html+=`</div>`;
-
- html+=section("منهجية العرض",
-  `<p>تستمد هذه المنصة بياناتها من جدول المدرسة.
-  وتعرض البنود كما وردت في قاعدة البيانات، دون احتساب
-  أحكام تقويمية أو نسب تحقق لم تسجلها المدرسة.</p>`
- );
-
+ return groups;
+}
+function counts(name){
+ const rows=domainRecords(name);
+ return {strengths:rows.filter(r=>r.strength).length,improvements:rows.filter(r=>r.improvement).length,criteria:new Set(rows.map(r=>r.criterion).filter(Boolean)).size,evidence:rows.filter(r=>r.strengthEvidence||r.improvementEvidence).length};
+}
+function overview(){
+ const stats=DOMAIN_NAMES.map(counts),s=stats.reduce((a,b)=>({strengths:a.strengths+b.strengths,improvements:a.improvements+b.improvements,criteria:a.criteria+b.criteria,evidence:a.evidence+b.evidence}),{strengths:0,improvements:0,criteria:0,evidence:0});
+ let html=hero("02 · SCHOOL SELF-EVALUATION","التحليل الذاتي للمدرسة","قراءة مؤسسية شاملة، تبدأ بالمعيار وتنتهي بالدليل، وتكشف جوانب الإجادة وفرص التحسين في المجالات الخمسة.");
+ html+=`<div class="grid">${stat("5","مجالات التقويم")}${stat(s.criteria,"المعايير المدرجة")}${stat(s.strengths,"جوانب الإجادة")}${stat(s.improvements,"جوانب التحسين")}</div><div class="split">`;
+ DOMAIN_NAMES.forEach((name,i)=>{const c=stats[i];html+=`<article class="domain-card"><div class="section-tag">المجال ${i+1} من 5</div><h3>${esc(name)}</h3><div class="pills"><span class="pill">${c.criteria} معايير</span><span class="pill green">${c.strengths} جوانب إجادة</span><span class="pill gold">${c.improvements} جوانب تحسين</span></div><p style="color:var(--sub);font-size:13px">استعراض المعايير وجوانب الأداء والأدلة والشواهد المرتبطة بها.</p><button class="btn primary" onclick="navigate('domain${i}')">استكشاف المجال ←</button></article>`});
+ html+="</div>";
+ html+=box("منهجية التقويم الذاتي",`<p>تُعرض بيانات التقويم الذاتي وفق تسلسل: <strong style="color:var(--aqua)">المجال ← المعيار ← جانب الإجادة أو التحسين ← الدليل</strong>. وتستمد المنصة معلوماتها من جدول البيانات المعتمد بالمدرسة دون افتراض نتائج أو أحكام غير موثقة.</p>`);
  return html;
 }
-
-function entryCard(item,index,type){
- const text=normalize(item.text);
- const evidence=normalize(item.evidence);
-
- return `<div class="entry">
-  <div class="section-label">
-   ${type==="strength"?"جانب إجادة":"جانب يحتاج إلى تحسين"}
-   · ${index+1}
-  </div>
-  <p>${textValue(text)}</p>
-  ${evidence?`<div class="evidence">
-   <strong>الدليل / الشاهد</strong>
-   <div>${textValue(evidence)}</div>
-  </div>`:""}
- </div>`;
+function entry(text,evidence,label){
+ if(!text&&!evidence)return "";
+ return `<article class="entry"><p>${text?fmt(text):"لم يدرج نص الجانب"}</p>${evidence?`<div class="evidence"><b>الدليل والشاهد</b>${fmt(evidence)}</div>`:""}</article>`;
 }
-
-function renderDomain(index){
- const d=getDomains()[index];
- if(!d)return renderOverview();
-
- const strengths=d.strengths||[];
- const improvements=d.improvements||[];
-
- let html=hero(
-  `مجال التقويم ${index+1} من 5`,
-  d.name,
-  "تحليل جوانب الإجادة والجوانب التي تحتاج إلى تحسين، استنادًا إلى الأدلة المسجلة في قاعدة بيانات المدرسة."
- );
-
- html+=`<div class="grid">
-  ${stat(strengths.length,"جوانب الإجادة")}
-  ${stat(improvements.length,"جوانب التحسين")}
-  ${stat(strengths.filter(x=>isFilled(x.evidence)).length,"أدلة الإجادة المدخلة")}
-  ${stat(improvements.filter(x=>isFilled(x.evidence)).length,"أدلة التحسين المدخلة")}
- </div>`;
-
- html+=`<div class="entries">
-  <section class="card">
-   <h2 style="color:var(--green)">✦ جوانب الإجادة</h2>
-   ${strengths.length
-    ?strengths.map((x,i)=>entryCard(x,i,"strength")).join("")
-    :'<div class="empty">لم تُدرج جوانب الإجادة في قاعدة البيانات بعد.</div>'
-   }
-  </section>
-
-  <section class="card">
-   <h2 style="color:var(--gold)">◈ جوانب التحسين</h2>
-   ${improvements.length
-    ?improvements.map((x,i)=>entryCard(x,i,"improvement")).join("")
-    :'<div class="empty">لم تُدرج جوانب التحسين في قاعدة البيانات بعد.</div>'
-   }
-  </section>
- </div>`;
-
- html+=`<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
-  <button class="btn" onclick="navigate('${index===0?"overview":"domain"+(index-1)}')">
-   → السابق
-  </button>
-  <button class="btn primary"
-   onclick="navigate('${index===4?"identity":"domain"+(index+1)}')">
-   ${index===4?"العودة إلى هوية المدرسة":"المجال التالي ←"}
-  </button>
- </div>`;
-
+function criterionCard(group,index){
+ const good=group.items.filter(r=>r.strength||r.strengthEvidence),bad=group.items.filter(r=>r.improvement||r.improvementEvidence);
+ return `<section class="criterion"><div class="criterion-head"><div class="section-tag">المعيار ${index+1}</div><h3>${esc(group.criterion)}</h3><div class="pills"><span class="pill green">${good.length} جوانب إجادة</span><span class="pill gold">${bad.length} جوانب تحسين</span></div></div><div class="criterion-body"><div class="entries"><div class="entry-column"><h4 class="good">✦ جوانب الإجادة وأدلتها</h4>${good.length?good.map(r=>entry(r.strength,r.strengthEvidence,"good")).join(""):'<div class="empty">لم تُسجل جوانب إجادة لهذا المعيار.</div>'}</div><div class="entry-column"><h4 class="warn">◈ جوانب التحسين وأدلتها</h4>${bad.length?bad.map(r=>entry(r.improvement,r.improvementEvidence,"warn")).join(""):'<div class="empty">لم تُسجل جوانب تحسين لهذا المعيار.</div>'}</div></div></div></section>`;
+}
+function domainPage(i){
+ const name=DOMAIN_NAMES[i];if(!name)return overview();
+ const c=counts(name),groups=grouped(name);
+ let html=hero(`المجال ${i+1} من 5`,name,"قراءة تفصيلية لمعايير المجال، وجوانب الإجادة والتحسين، والأدلة الداعمة لكل جانب.");
+ html+=`<div class="grid">${stat(c.criteria,"المعايير")}${stat(c.strengths,"جوانب الإجادة")}${stat(c.improvements,"جوانب التحسين")}${stat(c.evidence,"بنود تتضمن أدلة")}</div>`;
+ html+=`<div class="card"><h2>استكشف معايير المجال</h2><p class="hint">يمكنك البحث باسم المعيار أو بكلمة واردة في جوانب الإجادة أو التحسين أو أدلتها.</p><input class="search" id="criterionSearch" placeholder="ابحث داخل هذا المجال..." oninput="filterCriteria(this.value)"><div id="criteriaContent">${groups.length?groups.map(criterionCard).join(""):'<div class="empty">لم تُدرج بيانات المعايير لهذا المجال في جدول البيانات بعد.</div>'}</div></div>`;
+ html+=`<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><button class="btn" onclick="navigate('${i===0?"overview":"domain"+(i-1)}')">→ السابق</button><button class="btn primary" onclick="navigate('${i===4?"overview":"domain"+(i+1)}')">${i===4?"العودة إلى التحليل الذاتي":"المجال التالي ←"}</button></div>`;
  return html;
 }
-
-function render(){
- renderNavigation();
-
- if(!database){
-  $("app").innerHTML='<div class="loading">جارٍ تحميل البيانات...</div>';
-  return;
- }
-
- if(currentPage==="identity"){
-  $("app").innerHTML=renderIdentity();
- }else if(currentPage==="overview"){
-  $("app").innerHTML=renderOverview();
- }else if(currentPage.startsWith("domain")){
-  const i=Number(currentPage.replace("domain",""));
-  $("app").innerHTML=renderDomain(i);
- }else{
-  $("app").innerHTML=renderIdentity();
- }
+function filterCriteria(q){
+ searchTerm=norm(q).toLowerCase();
+ const i=Number(page.replace("domain","")),groups=grouped(DOMAIN_NAMES[i]);
+ const filtered=groups.map(g=>{
+  if(g.criterion.toLowerCase().includes(searchTerm))return g;
+  return {...g,items:g.items.filter(r=>[r.criterion,r.strength,r.strengthEvidence,r.improvement,r.improvementEvidence].some(v=>norm(v).toLowerCase().includes(searchTerm)))};
+ }).filter(g=>g.items.length);
+ $("criteriaContent").innerHTML=filtered.length?filtered.map(criterionCard).join(""):'<div class="empty">لا توجد نتائج مطابقة للبحث.</div>';
 }
-
-function setStatus(message){
- $("status").textContent=message;
-}
-
-function validateData(data){
- return data&&data.success===true&&
- typeof data.sheets==="object"&&
- Array.isArray(data.domains);
-}
-
+function render(){nav();if(!db){$("app").innerHTML='<div class="loading">جارٍ تحميل البيانات...</div>';return}$("app").innerHTML=page==="identity"?identity():page==="overview"?overview():page.startsWith("domain")?domainPage(Number(page.replace("domain",""))):identity()}
+function setStatus(s){$("status").textContent=s}
+function valid(data){return data&&data.success===true&&data.sheets&&Array.isArray(data.domains)}
 function loadData(manual=false){
- const request=++requestNumber;
-
- setStatus("جارٍ الاتصال بجدول البيانات...");
-
- // Google Apps Script يدعم JSONP من خلال callback
- const callback="abuDardaaCallback_"+request;
- const script=document.createElement("script");
-
- let completed=false;
-
- const timeout=setTimeout(()=>{
-  if(!completed)finishError("انتهت مهلة الاتصال");
- },18000);
-
- function cleanup(){
-  clearTimeout(timeout);
-  delete window[callback];
-  script.remove();
- }
-
- function finishError(reason){
-  if(completed)return;
-  completed=true;
-  cleanup();
-
-  if(database){
-   setStatus("تعذر التحديث؛ تُعرض آخر بيانات محفوظة. "+reason);
-  }else{
-   $("app").innerHTML=`
-    <div class="card">
-     <h2>تعذر تحميل بيانات المدرسة</h2>
-     <p>تحقق من اتصال الإنترنت وصلاحية رابط Google Apps Script.</p>
-     <button class="btn primary" onclick="loadData(true)">
-      إعادة المحاولة
-     </button>
-    </div>`;
-   setStatus(reason);
-  }
- }
-
- window[callback]=function(data){
-  if(completed)return;
-  if(!validateData(data)){
-   finishError("استجابة البيانات غير صالحة");
-   return;
-  }
-
-  completed=true;
-  cleanup();
-
-  database=data;
-
-  try{
-   localStorage.setItem(CACHE_KEY,JSON.stringify(data));
-  }catch(e){
-   console.warn("تعذر حفظ النسخة المحلية",e);
-  }
-
-  render();
-
-  const date=new Date();
-  setStatus("آخر تحديث ناجح: "+date.toLocaleString("ar-OM"));
-
-  if(manual){
-   console.info("تم تحديث بيانات نبض الإجادة");
-  }
- };
-
- script.onerror=()=>finishError("تعذر الوصول إلى خدمة البيانات");
-
- script.src=API_URL+
-  "?callback="+encodeURIComponent(callback)+
-  "&_="+Date.now();
-
+ const n=++requestId,cb="abuDardaaProCallback_"+n,script=document.createElement("script");let done=false;
+ setStatus("جارٍ تحديث البيانات من Google Sheets...");
+ const timeout=setTimeout(()=>fail("انتهت مهلة الاتصال"),20000);
+ function cleanup(){clearTimeout(timeout);delete window[cb];script.remove()}
+ function fail(reason){if(done)return;done=true;cleanup();if(db){setStatus("تعذر التحديث؛ تُعرض آخر بيانات محفوظة. "+reason)}else{$("app").innerHTML=`<div class="card"><h2>تعذر تحميل البيانات</h2><p>تحقق من اتصال الإنترنت ورابط Google Apps Script وصلاحية النشر.</p><button class="btn primary" onclick="loadData(true)">إعادة المحاولة</button></div>`;setStatus(reason)}}
+ window[cb]=function(data){if(done)return;if(!valid(data)){fail("استجابة غير صالحة من خدمة البيانات");return}done=true;cleanup();db=data;try{localStorage.setItem(CACHE_KEY,JSON.stringify(data))}catch(e){}render();setStatus("آخر تحديث ناجح: "+new Date().toLocaleString("ar-OM"))};
+ script.onerror=()=>fail("تعذر الوصول إلى خدمة البيانات");
+ script.src=API_URL+"?callback="+encodeURIComponent(cb)+"&_="+Date.now();
  document.head.appendChild(script);
 }
-
-function togglePresentation(){
- presentation=!presentation;
-
- document.body.classList.toggle("fullscreen",presentation);
-
- if(presentation){
-  document.documentElement.requestFullscreen?.().catch(()=>{});
- }else if(document.fullscreenElement){
-  document.exitFullscreen?.();
- }
+function toggleReview(){
+ review=!review;document.body.classList.toggle("review-mode",review);
+ if(review){document.documentElement.requestFullscreen?.().catch(()=>{})}
+ else if(document.fullscreenElement){document.exitFullscreen?.().catch(()=>{})}
 }
-
-document.addEventListener("keydown",function(e){
- if(!presentation)return;
-
- const pages=[
-  "identity","overview",
-  "domain0","domain1","domain2","domain3","domain4"
- ];
-
- const i=pages.indexOf(currentPage);
-
- if(e.key==="ArrowLeft"){
-  navigate(pages[Math.min(i+1,pages.length-1)]);
- }
-
- if(e.key==="ArrowRight"){
-  navigate(pages[Math.max(i-1,0)]);
- }
-
- if(e.key==="Escape"){
-  presentation=false;
-  document.body.classList.remove("fullscreen");
- }
+document.addEventListener("keydown",e=>{
+ if(!review)return;
+ const pages=["identity","overview",...DOMAIN_NAMES.map((_,i)=>"domain"+i)],i=pages.indexOf(page);
+ if(e.key==="ArrowLeft")navigate(pages[Math.min(i+1,pages.length-1)]);
+ if(e.key==="ArrowRight")navigate(pages[Math.max(i-1,0)]);
+ if(e.key==="Escape"){review=false;document.body.classList.remove("review-mode")}
 });
-
-// استعادة آخر نسخة ناجحة عند فتح المنصة
-try{
- const saved=localStorage.getItem(CACHE_KEY);
- if(saved){
-  const parsed=JSON.parse(saved);
-  if(validateData(parsed)){
-   database=parsed;
-   render();
-   setStatus("تُعرض البيانات المحفوظة لحين التحديث");
-  }
- }
-}catch(e){
- console.warn("تعذر استعادة النسخة المحفوظة",e);
-}
-
-// قراءة أحدث البيانات من Google Sheets
+try{const saved=localStorage.getItem(CACHE_KEY);if(saved){const data=JSON.parse(saved);if(valid(data)){db=data;render();setStatus("تُعرض البيانات المحفوظة لحين التحديث")}}}catch(e){}
 loadData();
 </script>
 </body>
